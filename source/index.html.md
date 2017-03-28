@@ -1,11 +1,11 @@
 ---
-title: API Reference
+title: CrowdShout API Reference
 
 language_tabs:
-  - shell
-  - ruby
-  - python
-  - javascript
+  - shell: cURL
+  - ruby: Ruby
+  - python: Python
+  - javascript: Javascript
 
 toc_footers:
   - <a href='#'>Sign Up for a Developer Key</a>
@@ -186,4 +186,3 @@ This endpoint retrieves a specific kitten.
 Parameter | Description
 --------- | -----------
 ID | The ID of the kitten to retrieve
-
