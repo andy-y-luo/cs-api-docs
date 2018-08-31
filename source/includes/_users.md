@@ -4,52 +4,72 @@ Users are the core of the platform, and can post Shouts, create Echoes of Shouts
 
 
 ## Creating User
-> Upon successful creation, the API will return the following response:
+> Request body:
+
+```json
+POST /users HTTP/1.1
+Content-Type: application/vnd.api+json
+Accept: application/vnd.api+json
+{
+  "data": {
+    "type": "users",
+    "attributes": {
+      "first-name": "Shreyas",
+      "last-name": "Radhakrishna",
+      "username": "airdog",
+      "email": "sar5477@psu.edu",
+      "birthday": "1986-03-28",
+      "password": "Hello123!",
+      "password-confirmation": "Hello123!"
+    }
+  }
+}
+```
+> Upon successful creation, the API will respond in the following manner:
 
 ```json
 HTTP/1.1 201 Created
 Content-Type: application/vnd.api+json
 {
-    "data": {
-        "id": "3",
-        "type": "users",
-        "attributes": {
-            "first-name": "Shreyas",
-            "last-name": "Radhakrishna",
-            "username": "airdog",
-            "email": "sar5744@psu.edu",
-            "birthday": "1986-03-28"
-        },
-        "relationships": {
-            "shout-contents": {
-                "data": []
-            }
-        }
+  "data": {
+    "id": "3",
+    "type": "users",
+    "attributes": {
+      "first-name": "Shreyas",
+      "last-name": "Radhakrishna",
+      "username": "airdog",
+      "email": "sar5744@psu.edu",
+      "birthday": "1986-03-28",
+      "shout-contents-count": 0,
+      "shout-beacons-count": 0
+    },
+    "relationships": {
+      "shout-contents": {
+        "data": []
+      }
     }
+  }
 }
 ```
-
-> If an error is encountered at any point while servicing the request, the API will respond with the following structure:
+> If an error is encountered at any point while servicing the request, the API will respond in the following manner:
 
 ```json
 HTTP/1.1 400 Bad Request
 Content-Type: application/vnd.api+json
 {
-    "errors": [
-        {
-            "status": "400",
-            "code": "2",
-            "title": "First name empty error",
-            "detail": "The provided user first_name is empty.",
-            "source": {
-                "pointer": "/data/attributes/first_name"
-            }
-        }
-    ]
+  "errors": [
+    {
+      "status": "400",
+      "code": "2",
+      "title": "First name empty error",
+      "detail": "The provided user first_name is empty.",
+      "source": { "pointer": "/data/attributes/first_name" }
+    }
+  ]
 }
 ```
 
-Creates a new User with the provided personal information and login credentials.
+Creates a new `User` with the provided personal information and login credentials. The user must confirm the provided email address before making any API requests, via the send email confirmation request and the confirm email request.
 
 ### HTTP Request
 `POST http://api.crowdshout.tech/users`
@@ -60,13 +80,13 @@ This request does not require a `User` Bearer Token, since the User has not yet 
 ### Request Parameters
 Name | Required | Description
  - | - | -
- first_name | Yes | the first name of the user
- last_name | Yes | the last name of the user
+ first-name | Yes | the first name of the user
+ last-name | Yes | the last name of the user
  username | Yes | the display name of the user
  email | Yes | the user's email address used for confirmation and periodic updates
  birthday | Yes | the birthday of the user, for age confirmation
  password | Yes | the chosen password for Authentication
- password_confirmation | Yes | must match `password` for request to succeed
+ password-confirmation | Yes | must match `password` for request to succeed
 
 #### First and Last Name Requirements
 The first and last names must each be under 50 characters in length.
@@ -137,6 +157,287 @@ xx | Invalid attribute length error | The provided password confirmation is shor
 xx | Invalid attribute length error | The provided password exceeds the maximum length (72 characters). | /data/attributes/password | 400
 xx | Invalid attribute length error | The provided password confirmation exceeds the maximum length (72 characters). | /data/attributes/password_confirmation | 400
 
+## Sending Confirmation Email
+> Request body:
+
+```json
+POST /email_confirmations HTTP/1.1
+Content-Type: application/vnd.api+json
+Accept: application/vnd.api+json
+{
+  "data": {
+    "type": "email-confirmation-tokens",
+    "attributes": {
+      "email": "andy.luo@crowdshout.tech",
+      "password": "Hello123!"
+    }
+  }
+}
+```
+> Upon successful creation, the API will respond in the following manner:
+
+```json
+HTTP/1.1 201 Created
+Content-Type: application/vnd.api+json
+{
+  "data": {
+    "type": "email-confirmation-tokens",
+    "id": "1234",
+  }
+}
+```
+
+```json
+HTTP/1.1 200 OK
+Content-Type: application/vnd.api+json
+```
+> If an error is encountered at any point while servicing the request, the API will respond in the following manner:
+
+```json
+HTTP/1.1 401 Unauthorized
+Content-Type: application/vnd.api+json
+{
+  "errors": [
+    {
+      "status": "401",
+      "code": "5",
+      "title": "Invalid code error",
+      "detail": "The request code does not match the expected code value.",
+      "source": { "parameter": "code" }
+    }
+  ]
+}
+```
+
+This request is for generating a new confirmation code to be associate with the newly created user, which is sent to the user's email. Should any previous confirmation tokens become expired, or any confirmation emails become lost, use this request to generate and send a new code.
+
+### HTTP Request
+`POST https://api.crowdshout.tech/email_confirmations`
+
+### Request Parameters
+Name | Required | Description
+ - | - | -
+email | Yes | the email of the user
+password | Yes | the password of the user
+
+### Errors
+Code | Title | Detail | Source | Status (HTTP)
+- | - | - | - | -
+
+## Confirming User Email
+> Request body:
+
+```json
+PUT /email_confirmations/:email_confirmation_id HTTP/1.1
+Content-Type: application/vnd.api+json
+Accept: application/vnd.api+json
+{
+  "data": {
+    "id": "1234",
+    "type": "email-confirmation-tokens",
+    "attributes": {
+      "email": "andy.luo@crowdshout.tech",
+      "password": "Hello123!",
+      "code": "123456"
+    }
+  }
+}
+```
+> Upon successful creation, the API will respond in the following manner:
+
+```json
+HTTP/1.1 200 OK
+Content-Type: application/vnd.api+json
+```
+> If an error is encountered at any point while servicing the request, the API will respond in the following manner:
+
+```json
+HTTP/1.1 401 Unauthorized
+Content-Type: application/vnd.api+json
+{
+  "errors": [
+    {
+      "status": "401",
+      "code": "5",
+      "title": "Invalid code error",
+      "detail": "The request code does not match the expected code value.",
+      "source": { "parameter": "code" }
+    }
+  ]
+}
+```
+
+Confirms the user email address and allows the user to make API requests.
+
+### HTTP Request
+`PUT https://api.crowdshout.tech/email_confirmations/:email_confirmation_id`
+
+where `:email_confirmation_id` is the id of the email confirmation token (received from a previous send confirmation email request)
+
+### Request Parameters
+Name | Required | Description
+ - | - | -
+email | Yes | the email of the user
+password | Yes | the password of the user
+code | Yes | the confirmation code delivered to the user's email address
+
+#### Code Requirements
+The code must be the numerical code sent to the user's email address as a string.
+
+#### Email Requirements
+The email must match the email belonging to the user who is associated with the email confirmation token.
+
+#### Password Requirements
+Must be the correct password for the associated user
+
+### Errors
+Code | Title | Detail | Source | Status (HTTP)
+- | - | - | - | -
+xx | Invalid code error | The request code does not match the expected code value. | code | 401
+xx | Expired token error | The confirmation token has expired. | N/A | 401
+xx | Missing token error | The confirmation could not be found or  was not properly generated | N/A | 500
+
+## Creating Password Reset
+In order to reset the password for a user (in the case of a forgotten password) use this request. This will generate a confirmation code and send it to the user's email, which must be used by the confirming password reset request to actually complete the password reset.
+
+> Request body:
+
+```json
+POST /password_resets HTTP/1.1
+Content-Type: application/vnd.api+json
+Accept: application/vnd.api+json
+{
+  "data": {
+    "type": "password-reset-tokens",
+    "attributes": {
+      "email": "andy.luo@crowdshout.tech"
+    }
+  }
+}
+```
+> If successful, the API will return the following response:
+
+```json
+HTTP/1.1 201 Created
+Content-Type: application/vnd.api+json
+{
+  "data": {
+    "id": 7,
+    "type": "password-reset-tokens"
+  }
+}
+```
+> If an error is encountered at any point while servicing the request, the API will respond in the following manner:
+
+```json
+{
+  "errors": [
+    {
+      "status": "401",
+      "code": "x",
+      "title": "Not found error",
+      "detail": "The provided email does not correspond to a user.",
+      "source": {
+        "parameter": "email"
+      }
+    }
+  ]
+}
+```
+
+### HTTP Request
+`POST https://api.crowdshout.tech/password_resets`
+
+### Request Parameters
+Name | Required | Description
+ - | - | -
+email | Yes | the email of the user
+
+### Errors
+Code | Title | Detail | Source | Status (HTTP)
+- | - | - | - | -
+
+## Confirming Password Reset
+This request will complete the password reset process, by submitting the new password and new password confirmation, along with confirmation code sent out in the email generated by the creating password reset request. If completed successfully, the user will be able to authenticate with the new password.
+
+> Request body:
+
+```json
+PUT /password_resets/:password_reset_id HTTP/1.1
+Content-Type: application/vnd.api+json
+Accept: application/vnd.api+json
+{
+  "data": {
+    "id": 7,
+    "type": "password-reset-tokens",
+    "attributes": {
+      "email": "andy.luo@crowdshout.tech",
+      "code": "123456",
+      "password": "Hello456!",
+      "password-confirmation": "Hello456!"
+    }
+  }
+}
+```
+> If successful, the API will return the following response:
+
+```json
+HTTP/1.1 200 OK
+Content-Type: application/vnd.api+json
+```
+> If an error is encountered at any point while servicing the request, the API will respond in the following manner:
+
+```json
+{
+  "errors": [
+    {
+      "status": "401",
+      "code": "x",
+      "title": "Not found error",
+      "detail": "The provided email does not correspond to a user.",
+      "source": {
+        "parameter": "email"
+      }
+    }
+  ]
+}
+```
+
+### HTTP Request
+`PUT https://api.crowdshout.tech/password_resets/:password_reset_id`
+
+where `:password_reset_id` is the id of the password reset token (received from a previous send confirmation email request)
+
+### Request Parameters
+Name | Required | Description
+ - | - | -
+code | Yes | the confirmation code delivered to the user's email address
+email | Yes | the email of the user
+password | Yes | the new password
+password-confirmation | Yes | the new password confirmation
+
+#### Code Requirements
+The code must be the numerical code sent to the user's email address as a string.
+
+#### Email Requirements
+The email must match the email belonging to the user who is associated with the email confirmation token.
+
+#### Password and Password Confirmation Requirements
+The password must meet the following requirements (same as when creating a new user):
+
+* between 8 and 72 characters
+
+* contain at least 1 uppercase letter
+
+* contain at least 1 number
+
+### Errors
+Code | Title | Detail | Source | Status (HTTP)
+- | - | - | - | -
+xx | Invalid code error | The request code does not match the expected code value. | code | 401
+xx | Expired token error | The confirmation token has expired. | N/A | 401
+xx | Missing token error | The confirmation could not be found or  was not properly generated | N/A | 500
+
 ## Showing User
 This request is for retrieving a single User provided by its UID, including the `ShoutContent`s (Shouts) that the user has made. In order to utilize this request, a valid `User` Bearer Token (does not have to correspond to the `User` to be retrieved, but must be authorized to view it) must be included.
 
@@ -150,22 +451,24 @@ Future versions of the API will only respond with a subset of the associated `Sh
 HTTP/1.1 200 OK
 Content-Type: application/vnd.api+json
 {
-    "data": {
-        "id": "3",
-        "type": "users",
-        "attributes": {
-            "first-name": "Shreyas",
-            "last-name": "Radhakrishna",
-            "username": "airdog",
-            "email": "sar5744@psu.edu",
-            "birthday": "1986-03-28"
-        },
-        "relationships": {
-            "shout-contents": {
-                "data": []
-            }
-        }
+  "data": {
+    "id": "3",
+    "type": "users",
+    "attributes": {
+      "first-name": "Shreyas",
+      "last-name": "Radhakrishna",
+      "username": "airdog",
+      "email": "sar5744@psu.edu",
+      "birthday": "1986-03-28",
+      "shout-contents-count": 0,
+      "shout-beacons-count": 0
+    },
+    "relationships": {
+      "shout-contents": {
+        "data": []
+      }
     }
+  }
 }
 ```
 
@@ -191,7 +494,27 @@ xx | User unauthorized error | The requester is not authorized to view this User
 
 
 ## Updating User
-Whenever information about a `User` needs to be changed, use this request. As of now, the only information that can't be changed is the email address and password. In order to use this request, you must have a valid `User` Bearer Token belonging the specific User you wish to update. This means that a user can only update his/her own `User` information.
+Whenever information about a `User` needs to be changed, use this request. As of now, the only information that can't be changed is the email address and password. In order to use this request, a valid `User` Bearer Token belonging the specific `User` to be updated must be included.. This means that a user can only update his/her own `User` information.
+
+> Request body:
+
+```json
+POST /users/:user_id HTTP/1.1
+Content-Type: application/vnd.api+json
+Accept: application/vnd.api+json
+{
+  "data": {
+    "id": "3",
+    "type": "users",
+    "attributes": {
+      "first-name": "Shreyas",
+      "last-name": "Radhakrishna",
+      "username": "airdog123",
+      "birthday": "1986-03-28"
+    }
+  }
+}
+```
 
 > If successful, API will return the following response:
 
@@ -199,22 +522,24 @@ Whenever information about a `User` needs to be changed, use this request. As of
 HTTP/1.1 200 OK
 Content-Type: application/vnd.api+json
 {
-    "data": {
-        "id": "3",
-        "type": "users",
-        "attributes": {
-            "first-name": "Shreyas",
-            "last-name": "Radhakrishna",
-            "username": "airdog123",
-            "email": "sar5744@psu.edu",
-            "birthday": "1986-03-28"
-        },
-        "relationships": {
-            "shout-contents": {
-                "data": []
-            }
-        }
+  "data": {
+    "id": "3",
+    "type": "users",
+    "attributes": {
+      "first-name": "Shreyas",
+      "last-name": "Radhakrishna",
+      "username": "airdog123",
+      "email": "sar5744@psu.edu",
+      "birthday": "1986-03-28",
+      "shout-contents-count": 0,
+      "shout-beacons-count": 0
+    },
+    "relationships": {
+      "shout-contents": {
+        "data": []
+      }
     }
+  }
 }
 
 ```
@@ -275,9 +600,13 @@ Content-Type: application/vnd.api+json
 This request removes all records of the `User` and in essence terminates the user account. Whenever this request is used, the `ShoutContent`s (Shouts) and `ShoutBeacon`s (Echoes) produced by the `User` will also be deleted. Use caution when utilizing this request, as there is no way to reverse the deletion of a `User`.
 
 ### HTTP Request
-`DELETE http://api.corwdshout.tech/users/:user_id`
+`DELETE http://api.crowdshout.tech/users/:user_id`
 
 Where `:user_id` is the UID of the `User` to be deleted.
+
+### Headers
+
+### Request Parameters
 
 ### Errors
 Code | Title | Detail | Source | Status (HTTP)
@@ -289,7 +618,7 @@ xx | User unauthorized error | The requester is not authorized to delete this `U
 ### Errors
 Code | Title | Detail | Source | Status (HTTP)
 - | - | - | - | -
-xx | Expired token error | The provided Bearer token has expired. | Authentication-Token | 401
+280 | Expired token error | The provided Bearer token has expired. | Authentication-Token | 401
 xx | Missing header error | The Authentication-Token header is missing. | Authentication-Token | 400
 xx | User not found error | The Bearer token does not correspond to a user. | Authentication-Token | 401
 xx | Decoding error | The provided Bearer token could not be decoded. | Authentication-Token | 500

@@ -2,6 +2,22 @@
 
 ## Retrieve Authorization Token
 
+> Request body:
+
+```json
+{
+  "data": {
+    "type": "user-credentials",
+    "attributes": {
+      "email": "ayl5429@psu.edu",
+      "password": "Hello123!",
+      "expires-in": 1440
+    }
+  }
+}
+```
+
+
 > Returns Authorization Token in following JSON response:
 
 ```json
@@ -10,9 +26,10 @@
         "id": "2017-12-17T20:02:22.049-05:00",
         "type": "token",
         "attributes": {
-            "access_token": "eyJ0eXAiOiJKV1QiLCJhbGci...",
-            "token_type": "Bearer",
-            "expires_in": "1440"
+            "access-token": "eyJ0eXAiOiJKV1QiLCJhbGci...",
+            "user-id": "5",
+            "token-type": "bearer",
+            "expires-in": 1440
         }
     }
 }
@@ -39,7 +56,7 @@ token will have a `expires_in` of `2880`. If the `expires_in` parameter is empty
 default to `1440`.
 
 ### Query Response
-The value keyed by `"id"` holds a timestamp of when the token was generated
+The value keyed by `"id"` holds a timestamp of when the token was generated. The token itself is the value keyed by `access_token`. The `user_id` corresponds to the UID of the authenticated `User` and should be saved for subsequent requests.
 
 ### Errors
 #### Email Errors

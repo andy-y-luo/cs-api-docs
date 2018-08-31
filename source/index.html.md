@@ -11,6 +11,9 @@ includes:
   - errors
   - authentication
   - users
+  - shouts
+  - shoutcontents
+  - shoutbeacons
 
 search: true
 ---
