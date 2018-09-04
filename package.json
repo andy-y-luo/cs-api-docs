@@ -1,0 +1,73 @@
+{
+  "name": "spectacle-docs",
+  "version": "1.0.5",
+  "description": "Generate beautiful static API documentation from OpenAPI/Swagger 2.0 specifications",
+  "preferGlobal": true,
+  "bin": {
+    "spectacle": "bin/spectacle.js"
+  },
+  "scripts": {
+    "build": "node bin/spectacle -l test/fixtures/cheese.png test/fixtures/cheese.yml",
+    "test": "mocha && node bin/spectacle -l test/fixtures/cheese.png test/fixtures/cheese.yml",
+    "develop": "spectacle -d",
+    "start": "spectacle -s"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sourcey/spectacle.git"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "keywords": [
+    "openapi",
+    "swagger",
+    "docs",
+    "documentation",
+    "builder",
+    "generator"
+  ],
+  "author": "Kam Low <auscaster@gmail.com> (https://sourcey.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sourcey/spectacle/issues"
+  },
+  "homepage": "https://sourcey.com/spectacle",
+  "dependencies": {
+    "bluebird": "^3.4.7",
+    "cheerio": "^0.19.0",
+    "chokidar": "^2.0.4",
+    "clarify": "^1.0.5",
+    "commander": "*",
+    "foundation-sites": "^6.4.1",
+    "grunt": "^1.0.3",
+    "grunt-compile-handlebars": "^2.0.0",
+    "grunt-contrib-clean": "^1.1.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^2.2.1",
+    "grunt-contrib-handlebars": "^1.0.0",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-uglify": "^3.3.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-embed": "^0.2.1",
+    "grunt-prettify": "^0.4.0",
+    "grunt-sass": "^3.0.0",
+    "handlebars": "^4.0.5",
+    "highlight.js": "^9.1.0",
+    "js-yaml": "^3.8.2",
+    "json-refs": "^2.1.7",
+    "json-stable-stringify": "^1.0.1",
+    "lodash": "^4.2.1",
+    "marked": "^0.3.5",
+    "node-sass": "^4.9.0",
+    "sync-request": "^4.1.0",
+    "tmp": "0.0.31",
+    "trace": "^1.1.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.5.3"
+  }
+}

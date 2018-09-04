@@ -1,0 +1,8 @@
+# error:
+#   $ref: "./error.yaml"
+# error_1:
+#   $ref: "./error_1.yaml"
+# forbidden:
+#   $ref: "./forbidden.yaml"
+# not_found:
+#   $ref: "./not_found.yaml"

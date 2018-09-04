@@ -1,0 +1,6 @@
+# #/components/responses/not_found
+description: resource not found
+content:
+  application/vnd.json+api:
+    schema:
+      $ref: "#/components/schemas/error_response"

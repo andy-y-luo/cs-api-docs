@@ -1,0 +1,3 @@
+- name: User
+  description: Users are the core of the platform, and can post shouts, create echoes of shouts, and perform other interactions with social content. Each User instance corresponds to a user account, and can be accessed from any client. Users are tied to their unique email addresses. Users can't view content that they are not authorized to view such as other user's personal information or detailed analytics about shouts/echoes that they have not made or are involved in.
+- name: Shout Content

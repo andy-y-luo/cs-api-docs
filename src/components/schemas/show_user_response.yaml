@@ -1,0 +1,41 @@
+# #/components/schemas/show_user_response
+description: "schema for show user response corresponding to non-self user"
+type: "object"
+required:
+  - "data"
+properties:
+  data:
+    type: "object"
+    required:
+      - "id"
+      - "type"
+      - "attributes"
+    properties:
+      id:
+        type: "string"
+      type:
+        type: "string"
+        example: "users"
+      attributes:
+        type: "object"
+        required:
+          - "first-name"
+          - "last-name"
+          - "username"
+          - "shout-contents-count"
+          - "shout-beacons-count"
+        properties:
+          first-name:
+            type: "string"
+            description: "The first name of the user."
+          last-name:
+            type: "string"
+            description: "The last name of the user."
+          username:
+            type: "string"
+          shout-contents-count:
+            type: "integer"
+            format: "int64"
+          shout-beacons-count:
+            type: "integer"
+            format: "int64"

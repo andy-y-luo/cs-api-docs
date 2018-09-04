@@ -1,0 +1,2 @@
+authentication_token:
+  $ref: "./authentication_token.yaml"

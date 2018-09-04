@@ -1,0 +1,8 @@
+Create User Request:
+  $ref: ./create_user_request.yaml
+Self User Response:
+  $ref: ./self_user_response.yaml
+User Response:
+  $ref: ./user_response.yaml
+Error Response:
+  $ref: ./error_response.yaml

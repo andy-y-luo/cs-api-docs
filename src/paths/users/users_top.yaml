@@ -1,0 +1,11 @@
+get:
+  summary: Request to view the top users by prominence.
+  description: This flexible endpoint allows for the consumer to query top users, while specifying parameters such as near-by vs. global, current vs. all-time, etc. All rankings are based off the prominence metric. Regardless of the parameters, up to ten users are retrieved.
+  
+  produces:
+    - application/vnd.api+json
+  parameters:
+
+  responses:
+    200:
+      description: OK

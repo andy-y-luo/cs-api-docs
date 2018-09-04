@@ -1,0 +1,8 @@
+create_user:
+  $ref: "./create_user.yaml"
+show_user:
+  $ref: "./show_user.yaml"
+show_user_forbidden:
+  $ref: "./show_user_forbidden.yaml"
+show_user_not_found:
+  $ref: "./show_user_not_found.yaml"

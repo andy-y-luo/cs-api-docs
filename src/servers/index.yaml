@@ -1,0 +1,6 @@
+- url: https://api.crowdshout.tech
+  description: Production server
+- url: https://api-stage.crowdshout.tech
+  description: Staging server
+- url: https://api-dev.crowdshout.tech
+  description: Development server

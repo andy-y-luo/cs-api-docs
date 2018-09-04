@@ -1,0 +1,17 @@
+error:
+  $ref: "./error/error.yaml"
+error_1:
+  $ref: "./error/error_1.yaml"
+forbidden:
+  $ref: "./error/forbidden.yaml"
+not_found:
+  $ref: "./error/not_found.yaml"
+
+create_user:
+  $ref: "./user/create_user.yaml"
+show_user:
+  $ref: "./user/show_user.yaml"
+show_user_forbidden:
+  $ref: "./user/show_user_forbidden.yaml"
+show_user_not_found:
+  $ref: "./user/show_user_not_found.yaml"

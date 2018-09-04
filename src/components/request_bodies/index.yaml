@@ -1,0 +1,2 @@
+create_user_request_body:
+  $ref: "./create_user.yaml"

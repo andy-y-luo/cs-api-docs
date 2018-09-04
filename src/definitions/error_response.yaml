@@ -1,0 +1,30 @@
+type: "object"
+required:
+  - "errors"
+properties:
+  errors:
+    type: "array"
+    items:
+      type: "object"
+      required:
+        - "status"
+        - "code"
+        - "title"
+        - "detail"
+        - "source"
+      properties:
+        status:
+          type: string
+          description: HTTP status code
+        code:
+          type: string
+          description: Application Specific Error Code
+        title:
+          type: string
+          description: Human-readable summary of the problem
+        detail:
+          type: string
+          description: Human-readable explanation of the problem
+        source:
+          type: object
+          description: Contains references to the source of the problem

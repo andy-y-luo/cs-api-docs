@@ -1,0 +1,10 @@
+title: "CrowdShout API (BETTER THAN CRATERACE API)"
+description: "This page provides documentation for the CrowdShout API. This API should only be accessed by the native CrowdShout applications running on mobile devices. As new features are added and changes are made to the endpoints, necessary information for frontend developers will be found here."
+contact:
+    name: "Andy Luo"
+    email: "andy.luo@crowdshout.tech"
+version: "0.1.0"
+x-logo:
+  url: "https://s3.amazonaws.com/api-docs-wip.crowdshout.tech/images/logo.png"
+  backgroundColor: "#FAFAFA"
+  altText: "CrowdShout Logo"

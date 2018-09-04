@@ -1,0 +1,42 @@
+get:
+  tags:
+    - "User"
+  summary: "View user"
+  description: "This request is for retrieving a single user by ID. This could be for one's own user, or a different user."
+  parameters:
+    - $ref: "#/components/parameters/authentication_token"
+    - name: "user_id"
+      in: "path"
+      description: "the ID of the user to retrieve"
+      required: true
+      type: "integer"
+      format: "int64"
+  responses:
+    200:
+      $ref: "#/components/responses/show_user"
+    403:
+      $ref: "#/components/responses/show_user_forbidden"
+    404:
+      $ref: "#/components/responses/show_user_not_found"
+  externalDocs:
+    description: "haslfasldfjlk"
+    url: "google.com"
+    
+
+  # responses:
+  #   200:
+  #     description: "user successfully retrieved (self user)"
+  #     schema:
+  #       $ref: '#/definitions/Self User Response'
+  #   201:
+  #     description: "user successfully retrieved (other user)"
+  #     schema:
+  #       $ref: '#/definitions/User Response'
+  #   403:
+  #     description: "(code xx) requesting user is not authorized to view this user"
+  #     schema:
+  #       $ref: '#/definitions/Error Response'
+  #   404:
+  #     description: "(code xx) user does not exist"
+  #     schema:
+  #       $ref: '#/definitions/Error Response'

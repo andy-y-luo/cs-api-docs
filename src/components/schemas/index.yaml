@@ -1,0 +1,13 @@
+# Error
+error_response:
+  $ref: "./error_response.yaml"
+
+# User
+create_user_request:
+  $ref: "./create_user_request.yaml"
+create_user_response:
+  $ref: "./create_user_response.yaml"
+show_user_response:
+  $ref: "./show_user_response.yaml"
+show_self_user_response:
+  $ref: "./show_self_user_response.yaml"

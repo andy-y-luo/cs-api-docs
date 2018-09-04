@@ -1,0 +1,6 @@
+# #/components/responses/forbidden
+description: access to this request has been refused
+content:
+  application/vnd.json+api:
+    schema:
+      $ref: "#/components/schemas/error_response"

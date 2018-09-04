@@ -1,0 +1,6 @@
+# #/components/parameters/authentication_token
+name: Authentication-Token
+in: header
+description: "the JWT token used to authenticate the requesting user, acquired from the authentication endpoint"
+required: true
+type: "string"

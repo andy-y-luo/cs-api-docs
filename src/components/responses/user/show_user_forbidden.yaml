@@ -1,0 +1,6 @@
+# #/components/responses/show_user_forbidden
+description: "access to this user has been refused (code: xx)"
+content:
+  application/vnd.json+api:
+    schema:
+      $ref: "#/components/schemas/error_response"

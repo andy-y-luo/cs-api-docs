@@ -1,0 +1,6 @@
+# create_user_request_body:
+description: user to register to the CrowdShout platform
+content:
+  "application/vnd.api+json":
+    schema:
+      $ref: "#/components/schemas/create_user_request"

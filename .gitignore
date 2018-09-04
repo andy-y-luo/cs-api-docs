@@ -22,3 +22,12 @@ build/
 _yardoc
 doc/
 .idea/
+
+# VS Code
+.vscode/
+
+# Node
+node_modules/
+
+# Build Directory
+public/

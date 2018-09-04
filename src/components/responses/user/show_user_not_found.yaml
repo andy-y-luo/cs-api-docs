@@ -1,0 +1,15 @@
+# #/components/responses/show_user_not_found
+description: |+
+  #### Email Errors
+  Code | Title | Detail | Source | Status (HTTP)
+  - | - | - | - | -
+  204 | Empty attribute error | The provided email is empty. | /data/attributes/email | 400
+  205 | Invalid attribute error | The provided email is not valid. | /data/attributes/email | 400
+  206 | Non-unique attribute error | The provided email is already associated with a user. | /data/attributes/email | 400
+  207 | Invalid attribute length error | The provided email exceeds maximum length (255 characters). | /data/attributes/email | 400
+
+
+content:
+  application/vnd.json+api:
+    schema:
+      $ref: "#/components/schemas/error_response"

@@ -1,0 +1,6 @@
+# #/components/responses/error
+description: an error was encountered
+content: 
+  application/vnd.json+api:
+    schema: 
+      $ref: '#/components/schemas/error_response'

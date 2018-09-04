@@ -1,0 +1,5 @@
+description: response containing the newly created user
+content: 
+  application/json:
+    schema: 
+      $ref: '#/components/schemas/create_user_response'

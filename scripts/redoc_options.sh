@@ -1,0 +1,1 @@
+--options.pathInMiddlePanel=true --options.theme.colors.primary.main="#1C5773" -t ./../template.hbs

@@ -1,0 +1,8 @@
+# #/components/responses/show_user
+description: response containing data about a user, could be non-self user (first schema) or self user (second schema)
+content: 
+  application/vnd.api+json:
+    schema:
+      oneOf:
+        - $ref: '#/components/schemas/show_user_response'
+        - $ref: "#/components/schemas/show_self_user_response"
