@@ -8,13 +8,3 @@ post:
   responses:
     200:
       $ref: "#/components/responses/create_user"
-    400:
-      $ref: "#/components/responses/error_1"
-
-  # parameters:
-  #   - name: "user"
-  #     in: "body"
-  #     description: "the user information and login credentials"
-  #     required: true
-  #     schema:
-  #       $ref: "#/definitions/Create User Request"

@@ -1,10 +1,22 @@
 var chokidar = require('chokidar');
 var yaml = require('js-yaml');
-var fs = require("fs")
-var JsonRefs = require("json-refs")
+var fs = require("fs");
+var JsonRefs = require("json-refs");
 
+// File and dir constants
+const INDEX_FILE = '/src/index.yaml'
+const OUTPUT_FILE = '/public/documentation.yaml'
+const SRC_DIR = 'src'
+
+// Something to use when events are received.
+var log = console.log.bind(console);
+
+/**
+ * Takes the index yaml file and resolves all the refs, writing to output file.
+ */
 function regenerateFromRefs() {
-  JsonRefs.resolveRefsAt(__dirname + '/src/index.yaml', {
+  log("Regenerating output file from source yaml files")
+  JsonRefs.resolveRefsAt(__dirname + INDEX_FILE, {
     filter: ['relative'],
     loaderOptions: {
       processContent: function (res, callback) {
@@ -13,26 +25,25 @@ function regenerateFromRefs() {
     }
   })
     .then(function (res) {
-      var json_string = JSON.stringify(res.resolved)
-      fs.writeFile(__dirname + "/public/documentation.json", json_string, function(err) {
-        if(err) {
-            return console.log(err);
-        }
-        console.log("The file was saved!");
-    }); 
+      var yaml_string = yaml.safeDump(res.resolved);
+      fs.writeFile(__dirname + OUTPUT_FILE, yaml_string, function(err) {
+          if(err) {
+              return console.log(err);
+          }
+          console.log("The output file was generated!");
+      }); 
     }, function (err) {
       console.log(err.stack);
     });
 }
 
 // Initialize watcher.
-var watcher = chokidar.watch('src', {
+var watcher = chokidar.watch(SRC_DIR, {
   ignored: /(^|[\/\\])\../,
   persistent: true
 });
 
-// Something to use when events are received.
-var log = console.log.bind(console);
+
 // Add event listeners.
 watcher
   .on('add', path => {
@@ -59,9 +70,3 @@ watcher
   .on('raw', (event, path, details) => {
     log('Raw event info:', event, path, details);
   });
-
-// 'add', 'addDir' and 'change' events also receive stat() results as second
-// argument when available: http://nodejs.org/api/fs.html#fs_class_fs_stats
-watcher.on('change', (path, stats) => {
-  if (stats) console.log(`File ${path} changed size to ${stats.size}`);
-});

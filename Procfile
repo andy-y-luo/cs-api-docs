@@ -1,2 +1,2 @@
-worker: nodemon src_watcher.js
-web: ./local_watch_server.sh
+worker: nodemon -e .yaml src_watcher.js
+web: ./scripts/local_watch_server.sh
