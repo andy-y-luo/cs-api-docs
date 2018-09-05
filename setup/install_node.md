@@ -24,7 +24,7 @@ NVM is a tool for installing and managing different node versions on the same ma
     ```bash
     $ bash install_nvm.sh
     ```
--if you're using a shell other than bash, you may need to append these lines to your shell configuration (e.g. .zshrc):
+- if you're using a shell other than bash, you may need to append these lines to your shell configuration (e.g. .zshrc):
     ```bash
     export NVM_DIR="/home/theasianpianist/.nvm"
     [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
