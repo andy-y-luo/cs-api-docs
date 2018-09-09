@@ -1,0 +1,11 @@
+# #/components/schemas/show_top_users_response
+description: "schema for show top users response"
+type: "object"
+required:
+  - "data"
+properties:
+  data:
+    type: "array"
+    items:
+      $ref: "#/components/schemas/user"
+      

@@ -9,7 +9,7 @@ It is important to note the manner in which files are organized in the `src` dir
 
 For example, for a `Response` object for the create user endpoint, instead of `#/components/responses/create_user_response`, it would be `#/components/responses/create_user`.
 
-### Local Sevelopment Server
+### Local Development Server
 Using foreman, a local server is spun up that watches the source directory and updates whenever a file changes:
 ```bash
 $ nf start

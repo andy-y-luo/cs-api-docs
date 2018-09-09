@@ -1,0 +1,9 @@
+# #/components/parameters/longitude
+name: "longitude"
+in: "query"
+description: "longitude of request location"
+required: true
+schema:
+  type: "string"
+  format: "coordinate, 5 digits after decimal"
+example: "77.86000"

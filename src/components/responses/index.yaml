@@ -6,12 +6,22 @@ forbidden:
   $ref: "./error/forbidden.yaml"
 not_found:
   $ref: "./error/not_found.yaml"
+requester_unauthorized:
+  $ref: "./error/requester_unauthorized.yaml"
 
 create_user:
   $ref: "./user/create_user.yaml"
+create_user_bad_request:
+  $ref: "./user/create_user_bad_request.yaml"
 show_user:
   $ref: "./user/show_user.yaml"
 show_user_forbidden:
   $ref: "./user/show_user_forbidden.yaml"
 show_user_not_found:
   $ref: "./user/show_user_not_found.yaml"
+show_top_users:
+  $ref: "./user/show_top_users.yaml"
+show_top_users_forbidden:
+  $ref: "./user/show_top_users_forbidden.yaml"
+show_top_users_bad_request:
+  $ref: "./user/show_top_users_bad_request.yaml"

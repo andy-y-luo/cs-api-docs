@@ -1,5 +1,11 @@
 # #/components/responses/show_user_forbidden
-description: "access to this user has been refused (code: xx)"
+description: |+ 
+  access to this user forbidden
+
+  Code | Title | Detail
+  - | - | -
+  xx | User unauthorized error | The requester is not authorized to access this user
+
 content:
   application/vnd.json+api:
     schema:

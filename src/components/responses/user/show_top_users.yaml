@@ -1,0 +1,6 @@
+# #/components/responses/show_top_users
+description: "response containing an array of top users"
+content:
+  application/vnd.api+json:
+    schema:
+      $ref: "#/components/schemas/show_top_users_response"

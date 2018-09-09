@@ -6,5 +6,7 @@ post:
   requestBody:
     $ref: '#/components/requestBodies/create_user_request_body'
   responses:
-    200:
+    203:
       $ref: "#/components/responses/create_user"
+    400:
+      $ref: "#/components/responses/create_user_bad_request"

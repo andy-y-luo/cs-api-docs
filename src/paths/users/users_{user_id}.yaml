@@ -1,19 +1,16 @@
 get:
   tags:
     - "User"
-  summary: "View user"
+  summary: "Show user"
   description: "This request is for retrieving a single user by ID. This could be for one's own user, or a different user."
   parameters:
     - $ref: "#/components/parameters/authentication_token"
-    - name: "user_id"
-      in: "path"
-      description: "the ID of the user to retrieve"
-      required: true
-      type: "integer"
-      format: "int64"
+    - $ref: "#/components/parameters/path_user_id"
   responses:
     200:
       $ref: "#/components/responses/show_user"
+    401:
+      $ref: "#/components/responses/requester_unauthorized"
     403:
       $ref: "#/components/responses/show_user_forbidden"
     404:

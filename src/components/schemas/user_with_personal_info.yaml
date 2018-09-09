@@ -1,0 +1,55 @@
+# #/components/schemas/user_with_personal_info
+description: "user object with personal account information"
+type: "object"
+required:
+  - "id"
+  - "type"
+  - "attributes"
+properties:
+  id:
+    type: "string"
+    format: "uuid"
+  type:
+    type: "string"
+    example: "users"
+  attributes:
+    type: "object"
+    required:
+      - "first-name"
+      - "last-name"
+      - "username"
+      - "email"
+      - "birthday"
+      - "shout-contents-count"
+      - "shout-beacons-count"
+      - "prominence"
+    properties:
+      first-name:
+        type: "string"
+        description: "first name of the user"
+      last-name:
+        type: "string"
+        description: "last name of the user"
+      username:
+        type: "string"
+        description: "display name of the user"
+      email:
+        type: "string"
+        format: "email"
+        description: "email of the user"
+      birthday:
+        type: "string"
+        format: "date"
+        description: "birthday of the user, follows ISO8601 date format"
+      shout-contents-count:
+        type: "integer"
+        format: "int64"
+        description: "number of shout contents the user has created"
+      shout-beacons-count:
+        type: "integer"
+        format: "int64"
+        description: "number of shout beacons the user has created"
+      prominence:
+        type: "integer"
+        format: "int64"
+        description: "all-time prominence score of the user"

@@ -1,0 +1,7 @@
+# #/components/parameters/path_user_id
+name: "user_id"
+in: "path"
+description: the id of the user
+required: true
+type: "integer"
+format: "int64"

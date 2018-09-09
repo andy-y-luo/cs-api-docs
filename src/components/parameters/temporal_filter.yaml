@@ -1,0 +1,8 @@
+# #/components/parameters/temporal_filter
+name: "temporal-filter"
+in: "query"
+description: "the temporal scope of the query"
+required: true
+schema:
+  type: "string"
+  enum: ["all-time", "active"]

@@ -1,0 +1,45 @@
+# #/components/schemas/user
+description: "public user object"
+type: "object"
+required:
+  - "id"
+  - "type"
+  - "attributes"
+properties:
+  id:
+    type: "string"
+    format: "uuid"
+  type:
+    type: "string"
+    example: "users"
+  attributes:
+    type: "object"
+    required:
+      - "first-name"
+      - "last-name"
+      - "username"
+      - "shout-contents-count"
+      - "shout-beacons-count"
+      - "prominence"
+    properties:
+      first-name:
+        type: "string"
+        description: "first name of the user"
+      last-name:
+        type: "string"
+        description: "last name of the user"
+      username:
+        type: "string"
+        description: "username of the user"
+      shout-contents-count:
+        type: "integer"
+        format: "int64"
+        description: "number of shout contents the user has created"
+      shout-beacons-count:
+        type: "integer"
+        format: "int64"
+        description: "number of shout beacons the user has created"
+      prominence:
+        type: "integer"
+        format: "int64"
+        description: "all-time prominence score of the user"

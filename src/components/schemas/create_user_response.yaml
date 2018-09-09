@@ -1,52 +1,8 @@
+# #/components/schemas/create_user_response
+description: "schema for create new user response, containing newly created user"
 type: "object"
 required:
   - "data"
 properties:
   data:
-    type: "object"
-    required:
-      - "id"
-      - "type"
-      - "attributes"
-    properties:
-      id:
-        type: "string"
-      type:
-        type: "string"
-        example: "users"
-      attributes:
-        type: "object"
-        required:
-          - "first-name"
-          - "last-name"
-          - "username"
-          - "email"
-          - "birthday"
-          - "shout-contents-count"
-          - "shout-beacons-count"
-        properties:
-          first-name:
-            type: "string"
-            description: "The first name of the user."
-          last-name:
-            type: "string"
-            description: "The last name of the user."
-          username:
-            type: "string"
-            description: "The display name of the user."
-          email:
-            type: "string"
-            format: "email"
-            description: "The email of the user."
-          birthday:
-            type: "string"
-            format: "date"
-            description: "The birthday of the user. Follows ISO8601 date format."
-          shout-contents-count:
-            type: "integer"
-            format: "int64"
-            description: "The number of shout contents the user has created."
-          shout-beacons-count:
-            type: "integer"
-            format: "int64"
-            description: "The number of shout beacons the user has created."
+    $ref: "#/components/schemas/user_with_personal_info"

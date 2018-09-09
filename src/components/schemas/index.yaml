@@ -3,6 +3,10 @@ error_response:
   $ref: "./error_response.yaml"
 
 # User
+user:
+  $ref: "./user.yaml"
+user_with_personal_info:
+  $ref: "./user_with_personal_info.yaml"
 create_user_request:
   $ref: "./create_user_request.yaml"
 create_user_response:
@@ -11,3 +15,5 @@ show_user_response:
   $ref: "./show_user_response.yaml"
 show_self_user_response:
   $ref: "./show_self_user_response.yaml"
+show_top_users_response:
+  $ref: "./show_top_users_response.yaml"

@@ -1,5 +1,5 @@
 description: response containing the newly created user
 content: 
-  application/json:
+  application/vnd.json+api:
     schema: 
       $ref: '#/components/schemas/create_user_response'

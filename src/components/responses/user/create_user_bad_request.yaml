@@ -1,0 +1,16 @@
+# #/components/responses/create_user_bad_request
+description: |+
+  bad create user request
+  
+  Code | Title | Detail
+  - | - | -
+  xx | Empty attribute error | The provided attribute is empty
+  xx | Invalid attribute error | The provided attribute is not valid
+  xx | Non-unique attribute error | The provided attribute is already associated with a user
+  xx | Confirmation mismatch error | The provided attribute confirmation does not match
+
+  `source` will point to the attribute generating error
+content: 
+  application/vnd.json+api:
+    schema: 
+      $ref: "#/components/schemas/error_response"

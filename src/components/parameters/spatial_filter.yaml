@@ -1,0 +1,8 @@
+# #/components/parameters/spatial_filter
+name: "spatial-filter"
+in: "query"
+description: "the spatial scope of query"
+required: true
+schema:
+  type: "string"
+  enum: ["global", "nearby"]

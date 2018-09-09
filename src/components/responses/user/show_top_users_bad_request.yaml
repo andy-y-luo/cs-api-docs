@@ -1,0 +1,14 @@
+# #/components/responses/show_top_users_bad_request
+description: |+
+  bad show top users request
+
+  Code | Title | Detail
+  - | - | -
+  xx | Missing required parameter error | A required parameter is empty or not provided
+  xx | Invalid parameter error | The provided parameter is not valid
+
+  `source` will point to the parameter generating error
+content:
+  application/vnd.json+api:
+    schema:
+      $ref: "#/components/schemas/error_response"

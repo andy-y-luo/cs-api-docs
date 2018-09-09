@@ -1,11 +1,21 @@
 get:
-  summary: Request to view the top users by prominence.
-  description: This flexible endpoint allows for the consumer to query top users, while specifying parameters such as near-by vs. global, current vs. all-time, etc. All rankings are based off the prominence metric. Regardless of the parameters, up to ten users are retrieved.
-  
-  produces:
-    - application/vnd.api+json
+  tags:
+    - "User"
+  summary: "Show top users"
+  description: "This flexible endpoint shows the top users, while filtering by scope such as near-by vs. global, current vs. all-time, etc. All rankings are based off the prominence metric. Regardless of the parameters, up to ten users are retrieved."
   parameters:
+    - $ref: "#/components/parameters/authentication_token"
+    - $ref: "#/components/parameters/spatial_filter"
+    - $ref: "#/components/parameters/temporal_filter"
+    - $ref: "#/components/parameters/latitude"
+    - $ref: "#/components/parameters/longitude"
 
   responses:
     200:
-      description: OK
+      $ref: "#/components/responses/show_top_users"
+    400:
+      $ref: "#/components/responses/show_top_users_bad_request"
+    401:
+      $ref: "#/components/responses/requester_unauthorized"
+    403:
+      $ref: "#/components/responses/show_top_users_forbidden"

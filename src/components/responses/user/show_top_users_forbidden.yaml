@@ -1,0 +1,12 @@
+# #/components/responses/show_top_users_forbidden
+description: |+
+  access to top users forbidden
+
+  Code | Title | Detail
+  - | - | -
+  xx | User unauthorized error | The requester is not authorized to access top users
+
+content:
+  application/vnd.json+api:
+    schema:
+      $ref: "#/components/schemas/error_response"

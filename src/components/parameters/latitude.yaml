@@ -1,0 +1,9 @@
+# #/components/parameters/latitude
+name: "latitude"
+in: "query"
+description: "latitude of request location"
+required: true
+schema:
+  type: "string"
+  format: "coordinate, 5 digits after decimal"
+example: "40.79340"

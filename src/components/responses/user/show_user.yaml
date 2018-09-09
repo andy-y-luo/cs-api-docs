@@ -1,5 +1,5 @@
 # #/components/responses/show_user
-description: response containing data about a user, could be non-self user (first schema) or self user (second schema)
+description: "response containing the user (non-self user: first schema, self user: second schema)"
 content: 
   application/vnd.api+json:
     schema:
