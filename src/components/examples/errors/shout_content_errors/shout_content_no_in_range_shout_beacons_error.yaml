@@ -1,0 +1,11 @@
+# #/components/examples/shout_content_no_in_range_shout_beacons_error
+summary: no in range shout beacons error
+value:
+  errors:
+    - status: 400
+      code: x
+      title: No in-range shout beacons error
+      detail: >
+        There are no associated shout beacons for the current shout content 
+        that are in range of the request location  
+      source: null

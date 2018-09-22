@@ -4,5 +4,7 @@ responses:
   $ref: "./responses/index.yaml"
 parameters:
   $ref: "./parameters/index.yaml"
+examples:
+  $ref: "./examples/index.yaml"
 requestBodies:
   $ref: "./request_bodies/index.yaml"

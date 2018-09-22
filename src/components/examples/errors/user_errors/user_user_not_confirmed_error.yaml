@@ -1,0 +1,9 @@
+# #/components/examples/user_user_not_confirmed_error
+summary: user not confirmed error
+value:
+  errors:
+    - status: 401
+      code: 5
+      title: User not confirmed error
+      detail: Request perfomed on user with unconfirmed email.
+      source: null

@@ -1,0 +1,10 @@
+# #/components/examples/user_missing_param_error
+summary: missing param error
+value:
+  errors:
+    - status: 400
+      code: 5
+      title: Missing parameter error
+      detail: Request is missing required parameter.
+      source:
+        parameter: null

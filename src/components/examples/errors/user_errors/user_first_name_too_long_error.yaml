@@ -1,0 +1,10 @@
+# #/components/examples/user_first_name_too_long_error
+summary: first name too long error
+value:
+  errors:
+    - status: 400
+      code: 2
+      title: Invalid attribute length error
+      detail: The provided first name exceeds maximum length.
+      source:
+        pointer: /data/attributes/first_name

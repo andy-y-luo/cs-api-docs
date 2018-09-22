@@ -1,0 +1,10 @@
+# #/components/examples/user_invalid_param_error
+summary: invalid param error
+value:
+  errors:
+    - status: 400
+      code: 5
+      title: Invalid parameter error
+      detail: Request includes parameter with invalid value.
+      source:
+        parameter: null

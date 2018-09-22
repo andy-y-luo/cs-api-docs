@@ -1,0 +1,10 @@
+# #/components/examples/user_user_does_not_exist_error
+summary: user does not exist error
+value:
+  errors:
+    - status: 404
+      code: 5
+      title: Resource does not exist error
+      detail: There is no user corresponding to the user_id.
+      source:
+        parameter: user_id

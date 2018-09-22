@@ -1,0 +1,10 @@
+# #/components/examples/user_empty_username_error
+summary: empty username error
+value:
+  errors:
+    - status: 400
+      code: 5
+      title: Empty attribute error
+      detail: The provided username is empty.
+      source:
+        pointer: /data/attributes/username

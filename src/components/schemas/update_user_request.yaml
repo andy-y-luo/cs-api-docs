@@ -1,0 +1,39 @@
+# #/components/schemas/update_user_request
+type: "object"
+required:
+  - "data"
+properties:
+  data:
+    type: "object"
+    required:
+      - "type"
+      - "attributes"
+      - "id"
+    properties:
+      id:
+        type: "string"
+        format: "uuid"
+      type:
+        type: "string"
+        example: "users"
+      attributes:
+        type: "object"
+        required:
+          - "first-name"
+          - "last-name"
+          - "username"
+          - "birthday"
+        properties:
+          first-name:
+            type: "string"
+            description: "The first name of the user. Must be under 50 characters in length"
+          last-name:
+            type: "string"
+            description: "The last name of the user. Must be under 50 characters in length"
+          username:
+            type: "string"
+            description: "The desired display name of the user. Must be between 5 and 30 characters, inclusive. The backend will validate the username for uniqueness."
+          birthday:
+            type: "string"
+            format: "date"
+            description: "The birthday of the user. Follows ISO8601 date format."

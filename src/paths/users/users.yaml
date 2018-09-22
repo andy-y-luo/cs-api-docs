@@ -4,7 +4,7 @@ post:
   summary: "Create user"
   description: "Creates a new user with the provided personal information and login credentials. The email address of the user must be confirmed before the user has authorization to make core API requests."
   requestBody:
-    $ref: '#/components/requestBodies/create_user_request_body'
+    $ref: '#/components/requestBodies/create_user'
   responses:
     203:
       $ref: "#/components/responses/create_user"

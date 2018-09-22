@@ -1,0 +1,119 @@
+# GENERATED ERROR EXAMPLES, DO NOT MODIFY BELOW
+authentication_empty_email_error:
+  $ref: './errors/authentication_errors/authentication_empty_email_error.yaml'
+authorization_unauthorized_user_update_error:
+  $ref: './errors/authorization_errors/authorization_unauthorized_user_update_error.yaml'
+confirmation_token_invalid_code_error:
+  $ref: './errors/confirmation_token_errors/confirmation_token_invalid_code_error.yaml'
+json_api_missing_data_member_error:
+  $ref: './errors/json_api_errors/json_api_missing_data_member_error.yaml'
+shout_beacon_invalid_attr_error:
+  $ref: './errors/shout_beacon_errors/shout_beacon_invalid_attr_error.yaml'
+shout_content_root_beacon_creation_error:
+  $ref: './errors/shout_content_errors/shout_content_root_beacon_creation_error.yaml'
+shoutset_missing_param_error:
+  $ref: './errors/shoutset_errors/shoutset_missing_param_error.yaml'
+user_empty_first_name_error:
+  $ref: './errors/user_errors/user_empty_first_name_error.yaml'
+authentication_email_not_found_error:
+  $ref: './errors/authentication_errors/authentication_email_not_found_error.yaml'
+authentication_empty_password_error:
+  $ref: './errors/authentication_errors/authentication_empty_password_error.yaml'
+authentication_incorrect_password_error:
+  $ref: './errors/authentication_errors/authentication_incorrect_password_error.yaml'
+authentication_expired_token_error:
+  $ref: './errors/authentication_errors/authentication_expired_token_error.yaml'
+authentication_missing_token_header_error:
+  $ref: './errors/authentication_errors/authentication_missing_token_header_error.yaml'
+authentication_user_not_found_error:
+  $ref: './errors/authentication_errors/authentication_user_not_found_error.yaml'
+authentication_token_decoding_error:
+  $ref: './errors/authentication_errors/authentication_token_decoding_error.yaml'
+authorization_unauthorized_user_delete_error:
+  $ref: './errors/authorization_errors/authorization_unauthorized_user_delete_error.yaml'
+confirmation_token_expired_token_error:
+  $ref: './errors/confirmation_token_errors/confirmation_token_expired_token_error.yaml'
+confirmation_token_missing_token_error:
+  $ref: './errors/confirmation_token_errors/confirmation_token_missing_token_error.yaml'
+shout_beacon_missing_attr_error:
+  $ref: './errors/shout_beacon_errors/shout_beacon_missing_attr_error.yaml'
+shout_beacon_not_in_range_of_shout_beacon_error:
+  $ref: './errors/shout_beacon_errors/shout_beacon_not_in_range_of_shout_beacon_error.yaml'
+shout_beacon_invalid_root_beacon_error:
+  $ref: './errors/shout_beacon_errors/shout_beacon_invalid_root_beacon_error.yaml'
+shout_beacon_shout_beacon_dne_error:
+  $ref: './errors/shout_beacon_errors/shout_beacon_shout_beacon_dne_error.yaml'
+shout_beacon_multiple_root_beacon_error:
+  $ref: './errors/shout_beacon_errors/shout_beacon_multiple_root_beacon_error.yaml'
+shout_beacon_self_join_cond_unmet_error:
+  $ref: './errors/shout_beacon_errors/shout_beacon_self_join_cond_unmet_error.yaml'
+shout_beacon_invalid_sql_query_error:
+  $ref: './errors/shout_beacon_errors/shout_beacon_invalid_sql_query_error.yaml'
+shout_content_missing_attr_error:
+  $ref: './errors/shout_content_errors/shout_content_missing_attr_error.yaml'
+shout_content_invalid_attr_error:
+  $ref: './errors/shout_content_errors/shout_content_invalid_attr_error.yaml'
+shout_content_no_in_range_shout_beacons_error:
+  $ref: './errors/shout_content_errors/shout_content_no_in_range_shout_beacons_error.yaml'
+shout_content_user_already_echoed_error:
+  $ref: './errors/shout_content_errors/shout_content_user_already_echoed_error.yaml'
+shout_content_shout_content_dne_error:
+  $ref: './errors/shout_content_errors/shout_content_shout_content_dne_error.yaml'
+shoutset_invalid_coordinate_error:
+  $ref: './errors/shoutset_errors/shoutset_invalid_coordinate_error.yaml'
+user_first_name_too_long_error:
+  $ref: './errors/user_errors/user_first_name_too_long_error.yaml'
+user_empty_last_name_error:
+  $ref: './errors/user_errors/user_empty_last_name_error.yaml'
+user_last_name_too_long_error:
+  $ref: './errors/user_errors/user_last_name_too_long_error.yaml'
+user_empty_email_error:
+  $ref: './errors/user_errors/user_empty_email_error.yaml'
+user_invalid_email_error:
+  $ref: './errors/user_errors/user_invalid_email_error.yaml'
+user_non_unique_email_error:
+  $ref: './errors/user_errors/user_non_unique_email_error.yaml'
+user_email_too_long_error:
+  $ref: './errors/user_errors/user_email_too_long_error.yaml'
+user_empty_username_error:
+  $ref: './errors/user_errors/user_empty_username_error.yaml'
+user_username_too_long_error:
+  $ref: './errors/user_errors/user_username_too_long_error.yaml'
+user_username_too_short_error:
+  $ref: './errors/user_errors/user_username_too_short_error.yaml'
+user_non_unique_username_error:
+  $ref: './errors/user_errors/user_non_unique_username_error.yaml'
+user_empty_birthday_error:
+  $ref: './errors/user_errors/user_empty_birthday_error.yaml'
+user_invalid_birthday_format_error:
+  $ref: './errors/user_errors/user_invalid_birthday_format_error.yaml'
+user_implausible_birthday_error:
+  $ref: './errors/user_errors/user_implausible_birthday_error.yaml'
+user_empty_password_error:
+  $ref: './errors/user_errors/user_empty_password_error.yaml'
+user_empty_password_confirmation_error:
+  $ref: './errors/user_errors/user_empty_password_confirmation_error.yaml'
+user_invalid_password_error:
+  $ref: './errors/user_errors/user_invalid_password_error.yaml'
+user_password_confirmation_mismatch_error:
+  $ref: './errors/user_errors/user_password_confirmation_mismatch_error.yaml'
+user_password_too_short_error:
+  $ref: './errors/user_errors/user_password_too_short_error.yaml'
+user_password_confirmation_too_short_error:
+  $ref: './errors/user_errors/user_password_confirmation_too_short_error.yaml'
+user_password_too_long_error:
+  $ref: './errors/user_errors/user_password_too_long_error.yaml'
+user_password_confirmation_too_long_error:
+  $ref: './errors/user_errors/user_password_confirmation_too_long_error.yaml'
+user_invalid_coordinate_error:
+  $ref: './errors/user_errors/user_invalid_coordinate_error.yaml'
+user_invalid_prominence_value_error:
+  $ref: './errors/user_errors/user_invalid_prominence_value_error.yaml'
+user_user_does_not_exist_error:
+  $ref: './errors/user_errors/user_user_does_not_exist_error.yaml'
+user_missing_param_error:
+  $ref: './errors/user_errors/user_missing_param_error.yaml'
+user_invalid_param_error:
+  $ref: './errors/user_errors/user_invalid_param_error.yaml'
+user_user_not_confirmed_error:
+  $ref: './errors/user_errors/user_user_not_confirmed_error.yaml'

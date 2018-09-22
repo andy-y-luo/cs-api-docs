@@ -1,2 +1,4 @@
-create_user_request_body:
+create_user:
   $ref: "./create_user.yaml"
+update_user:
+  $ref: "./update_user.yaml"

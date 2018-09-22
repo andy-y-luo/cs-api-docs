@@ -1,0 +1,10 @@
+# #/components/examples/authorization_unauthorized_user_delete_error
+summary: unauthorized user delete error
+value:
+  errors:
+    - status: 403
+      code: x
+      title: User unauthorized error
+      detail: The authentication token bearer is not authorized to delete this user.
+      source:
+        parameter: Authentication-Token

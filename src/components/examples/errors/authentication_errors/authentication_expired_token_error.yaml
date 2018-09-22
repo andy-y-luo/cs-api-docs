@@ -1,0 +1,10 @@
+# #/components/examples/authentication_expired_token_error
+summary: expired token error
+value:
+  errors:
+    - status: 401
+      code: 280
+      title: Expired token error
+      detail: The provided authentication token has expired.
+      source:
+        parameter: Authentication-Token

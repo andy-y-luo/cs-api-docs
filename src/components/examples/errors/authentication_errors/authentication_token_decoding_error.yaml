@@ -1,0 +1,10 @@
+# #/components/examples/authentication_token_decoding_error
+summary: token decoding error
+value:
+  errors:
+    - status: 500
+      code: x
+      title: Decoding error
+      detail: The provided authentication token could not be decoded.
+      source:
+        parameter: Authentication-Token

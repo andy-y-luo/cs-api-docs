@@ -1,0 +1,9 @@
+# #/components/examples/shout_beacon_multiple_root_beacon_error
+summary: multiple root beacon error
+value:
+  errors:
+    - status: 500
+      code: x
+      title: Multiple root shout beacons error
+      detail: Multiple root shout beacons per shout content is not allowed.
+      source: null

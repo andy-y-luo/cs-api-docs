@@ -15,3 +15,17 @@ get:
       $ref: "#/components/responses/show_user_forbidden"
     404:
       $ref: "#/components/responses/show_user_not_found"
+
+put:
+  tags:
+    - "User"
+  summary: "Update user"
+  description: "This request is for updating a user by ID. This action can only be performed for one's own user (i.e. the authentication token must correspond to the user to be updated)."
+  parameters:
+    - $ref: "#/components/parameters/authentication_token"
+    - $ref: "#/components/parameters/path_user_id"
+  requestBody:
+    $ref: "#/components/requestBodies/update_user"
+  responses:
+    200:
+      $ref: "#/components/responses/update_user"

@@ -1,0 +1,10 @@
+# #/components/examples/authorization_unauthorized_user_update_error
+summary: unauthorized user update error
+value:
+  errors:
+    - status: 403
+      code: x
+      title: User unauthorized error
+      detail: The authentication token bearer is not authorized to update this user.
+      source:
+        parameter: Authentication-Token

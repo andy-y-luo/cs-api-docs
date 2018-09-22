@@ -1,0 +1,6 @@
+# #/components/responses/update_user
+description: response containing the updated user
+content:
+  application/vnd.json+api:
+    schema:
+      $ref: "#/components/schemas/update_user_response"

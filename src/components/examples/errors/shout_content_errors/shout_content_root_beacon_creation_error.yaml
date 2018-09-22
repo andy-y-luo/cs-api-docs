@@ -1,0 +1,9 @@
+# #/components/examples/shout_content_root_beacon_creation_error
+summary: root beacon creation error
+value:
+  errors:
+    - status: 500
+      code: x
+      title: Resource creation error
+      detail: Unable to create root beacon
+      source: null

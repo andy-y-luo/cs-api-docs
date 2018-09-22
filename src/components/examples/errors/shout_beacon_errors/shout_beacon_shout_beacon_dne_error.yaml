@@ -1,0 +1,9 @@
+# #/components/examples/shout_beacon_shout_beacon_dne_error
+summary: shout beacon dne error
+value:
+  errors:
+    - status: 404
+      code: x
+      title: Shout beacon does not exist error
+      detail: The shout beacon specified by request could not be found.
+      source: null

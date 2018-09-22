@@ -10,3 +10,22 @@ content:
   application/vnd.json+api:
     schema:
       $ref: "#/components/schemas/error_response"
+    examples:
+      empty_first_name_error:
+        $ref: "#/components/examples/user_empty_first_name_error"
+      empty_password_error:
+        $ref: "#/components/examples/user_empty_password_error"
+      expired_token_error:
+        $ref: "#/components/examples/authentication_expired_token_error"
+      error_4:
+        summary: sdsdlsdflsdf
+        descripton: "description 2"
+        value:
+      error_5:
+        summary: sdsdllsdfsdfsdf
+        descripton: "description 2"
+        value:
+      error_6:
+        summary: sdsdllsdfsdf
+        descripton: "description 2"
+        value:

@@ -1,0 +1,10 @@
+# #/components/examples/user_implausible_birthday_error
+summary: implausible birthday error
+value:
+  errors:
+    - status: 400
+      code: 5
+      title: Implausible attribute error
+      detail: The provided birthday is wildly implausible.
+      source:
+        pointer: /data/attributes/birthday

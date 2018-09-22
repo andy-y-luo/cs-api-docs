@@ -17,3 +17,7 @@ show_self_user_response:
   $ref: "./show_self_user_response.yaml"
 show_top_users_response:
   $ref: "./show_top_users_response.yaml"
+update_user_request:
+  $ref: "./update_user_request.yaml"
+update_user_response:
+  $ref: "./update_user_response.yaml"

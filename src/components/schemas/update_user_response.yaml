@@ -1,0 +1,8 @@
+# #/components/schemas/update_user_response
+description: "schema for update new user response, containing the updated user"
+type: "object"
+required:
+  - "data"
+properties:
+  data:
+    $ref: "#/components/schemas/user_with_personal_info"

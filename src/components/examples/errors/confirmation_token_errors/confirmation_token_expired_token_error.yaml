@@ -1,0 +1,9 @@
+# #/components/examples/confirmation_token_expired_token_error
+summary: expired token error
+value:
+  errors:
+    - status: 401
+      code: x
+      title: Expired token error
+      detail: The confirmation token has expired.
+      source: null

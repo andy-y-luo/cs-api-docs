@@ -28,6 +28,7 @@ doc/
 
 # Node
 node_modules/
+.env
 
 # Build Directory
 public/

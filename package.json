@@ -22,7 +22,9 @@
   "homepage": "https://sourcey.com/spectacle",
   "dependencies": {
     "chokidar": "^2.0.4",
+    "dotenv": "^6.0.0",
     "js-yaml": "^3.8.2",
-    "json-refs": "^2.1.7"
+    "json-refs": "^2.1.7",
+    "lodash": "^4.17.11"
   }
 }

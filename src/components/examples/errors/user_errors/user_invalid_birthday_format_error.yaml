@@ -1,0 +1,10 @@
+# #/components/examples/user_invalid_birthday_format_error
+summary: invalid birthday format error
+value:
+  errors:
+    - status: 400
+      code: 5
+      title: Invalid attribute format error
+      detail: The provided birthday is incorrectly formatted
+      source:
+        pointer: /data/attributes/birthday

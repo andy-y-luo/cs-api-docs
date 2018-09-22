@@ -1,3 +1,4 @@
+# #/components/responses/create_user
 description: response containing the newly created user
 content: 
   application/vnd.json+api:

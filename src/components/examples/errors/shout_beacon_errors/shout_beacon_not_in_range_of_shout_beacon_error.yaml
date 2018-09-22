@@ -1,0 +1,11 @@
+# #/components/examples/shout_beacon_not_in_range_of_shout_beacon_error
+summary: not in range of shout beacon error
+value:
+  errors:
+    - status: 400
+      code: x
+      title: Not in range of shout beacon error
+      detail: >
+        The request was not made from a location that is in range of the
+        associated shout beacon.
+      source: null

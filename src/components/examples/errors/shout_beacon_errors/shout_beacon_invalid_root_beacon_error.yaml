@@ -1,0 +1,12 @@
+# #/components/examples/shout_beacon_invalid_root_beacon_error
+summary: invalid root beacon error
+value:
+  errors:
+    - status: 500
+      code: x
+      title: Invalid root shout beacon error
+      detail: >
+        Root shout beacon could not be created/updated due to incorrect
+        attributes or conditions.
+      source:
+        pointer: /data/attributes/parent_shout_beacon_id

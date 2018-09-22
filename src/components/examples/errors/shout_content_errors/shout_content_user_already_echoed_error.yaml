@@ -1,0 +1,9 @@
+# #/components/examples/shout_content_user_already_echoed_error
+summary: user already echoed error
+value:
+  errors:
+    - status: 400
+      code: x
+      title: User already echoed error
+      detail: The user has already echoed this shout content.
+      source: null

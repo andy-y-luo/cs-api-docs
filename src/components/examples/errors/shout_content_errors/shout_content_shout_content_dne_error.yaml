@@ -1,0 +1,9 @@
+# #/components/examples/shout_content_shout_content_dne_error
+summary: shout content dne error
+value:
+  errors:
+    - status: 404
+      code: x
+      title: Resource does not exist error
+      detail: The shout content specified by the request could not be found.
+      source: nil

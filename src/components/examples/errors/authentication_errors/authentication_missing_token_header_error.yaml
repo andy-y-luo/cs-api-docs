@@ -1,0 +1,10 @@
+# #/components/examples/authentication_missing_token_header_error
+summary: missing token header error
+value:
+  errors:
+    - status: 400
+      code: x
+      title: Missing header error
+      detail: The Authentication-Token header is missing from the request.
+      source:
+        parameter: Authentication-Token

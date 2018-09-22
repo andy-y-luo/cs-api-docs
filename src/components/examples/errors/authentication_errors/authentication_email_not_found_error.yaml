@@ -1,0 +1,10 @@
+# #/components/examples/authentication_email_not_found_error
+summary: email not found error
+value:
+  errors:
+    - status: 401
+      code: x
+      title: Attribute not found error
+      detail: The provided email does not correspond to a user.
+      source:
+        parameter: email

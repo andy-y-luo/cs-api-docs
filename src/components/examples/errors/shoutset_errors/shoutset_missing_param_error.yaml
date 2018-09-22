@@ -1,0 +1,9 @@
+# #/components/examples/shoutset_missing_param_error
+summary: missing param error
+value:
+  errors:
+    - status: 400
+      code: x
+      title: Missing parameter error
+      detail: The shoutset request is missing a required parameter.
+      source: null

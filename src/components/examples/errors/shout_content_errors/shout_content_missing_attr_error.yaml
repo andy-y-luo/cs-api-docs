@@ -1,0 +1,9 @@
+# #/components/examples/shout_content_missing_attr_error
+summary: missing attr error
+value:
+  errors:
+    - status: 400
+      code: x
+      title: Missing attribute error
+      detail: The shout content request is missing a required attribute.
+      source: null

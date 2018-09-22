@@ -1,0 +1,6 @@
+# #/components/requestBodies/update_user
+description: attributes to update for existing user
+content:
+  "application/vnd.api+json":
+    schema:
+      $ref: "#/components/schemas/update_user_request"

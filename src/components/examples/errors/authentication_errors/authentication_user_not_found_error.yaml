@@ -1,0 +1,10 @@
+# #/components/examples/authentication_user_not_found_error
+summary: user not found error
+value:
+  errors:
+    - status: 401
+      code: x
+      title: Resource not found error
+      detail: The authentication token does not correspond to a user.
+      source:
+        parameter: Authentication-Token

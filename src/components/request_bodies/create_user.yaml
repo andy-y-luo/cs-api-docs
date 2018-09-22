@@ -1,4 +1,4 @@
-# create_user_request_body:
+# #/components/requestBodies/create_user
 description: user to register to the CrowdShout platform
 content:
   "application/vnd.api+json":

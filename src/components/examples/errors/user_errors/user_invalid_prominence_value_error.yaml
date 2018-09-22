@@ -1,0 +1,10 @@
+# #/components/examples/user_invalid_prominence_value_error
+summary: invalid prominence value error
+value:
+  errors:
+    - status: 500
+      code: 5
+      title: Invalid prominence value error
+      detail: The prominence value for this user is invalid.
+      source:
+        pointer: /data/attributes/prominence

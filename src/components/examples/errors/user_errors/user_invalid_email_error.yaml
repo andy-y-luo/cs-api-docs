@@ -1,0 +1,10 @@
+# #/components/examples/user_invalid_email_error
+summary: invalid email error
+value:
+  errors:
+    - status: 400
+      code: 4
+      title: Invalid attribute error
+      detail: The provided email is not valid.
+      source:
+        pointer: /data/attributes/email

@@ -1,0 +1,10 @@
+# #/components/examples/user_email_too_long_error
+summary: email too long error
+value:
+  errors:
+    - status: 400
+      code: 4
+      title: Invalid attribute length error
+      detail: The provided email exceeds maximum length.
+      source:
+        pointer: /data/attributes/email

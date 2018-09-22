@@ -1,0 +1,9 @@
+# #/components/examples/shout_beacon_invalid_sql_query_error
+summary: invalid sql query error
+value:
+  errors:
+    - status: 500
+      code: x
+      title: Invalid SQL query error
+      detail: Attempted to execute invalid SQL query.
+      source: null

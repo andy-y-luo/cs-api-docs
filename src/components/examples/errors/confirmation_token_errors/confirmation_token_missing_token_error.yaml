@@ -1,0 +1,10 @@
+# #/components/examples/confirmation_token_missing_token_error
+summary: missing token error
+value:
+  errors:
+    - status: 500
+      code: x
+      title: Missing token error
+      detail: |
+        The confirmation token could not be found or was not properly generated.
+      source: null

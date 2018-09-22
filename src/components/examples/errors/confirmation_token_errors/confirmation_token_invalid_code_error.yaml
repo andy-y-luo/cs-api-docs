@@ -1,0 +1,10 @@
+# #/components/examples/confirmation_token_invalid_code_error
+summary: invalid code error
+value:
+  errors:
+    - status: 401
+      code: x
+      title: Invalid code error
+      detail: The request code does not match the expected code value.
+      source:
+        parameter: code

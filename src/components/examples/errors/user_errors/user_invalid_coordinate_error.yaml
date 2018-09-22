@@ -1,0 +1,10 @@
+# #/components/examples/user_invalid_coordinate_error
+summary: invalid coordinate error
+value:
+  errors:
+    - status: 400
+      code: 5
+      title: Invalid coordinate error
+      detail: The provided coordinates are not a valid format or value.
+      source:
+        parameter: latitude;longitude

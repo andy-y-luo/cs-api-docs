@@ -1,0 +1,10 @@
+# #/components/examples/authentication_empty_email_error
+summary: empty email error
+value:
+  errors:
+    - status: 400
+      code: x
+      title: Empty parameter error
+      detail: The provided email is empty
+      source:
+        parameter: email

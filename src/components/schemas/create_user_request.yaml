@@ -1,3 +1,4 @@
+# #/components/schemas/create_user_request
 type: "object"
 required:
   - "data"

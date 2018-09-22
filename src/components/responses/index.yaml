@@ -25,3 +25,5 @@ show_top_users_forbidden:
   $ref: "./user/show_top_users_forbidden.yaml"
 show_top_users_bad_request:
   $ref: "./user/show_top_users_bad_request.yaml"
+update_user:
+  $ref: "./user/update_user.yaml"
