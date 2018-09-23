@@ -1,0 +1,10 @@
+# #/components/examples/user_invalid_attribute_error
+summary: invalid attribute error
+value:
+  errors:
+    - status: 400
+      code: 5
+      title: Invalid attribute error
+      detail: A resource attribute is invalid.
+      source:
+        pointer: null

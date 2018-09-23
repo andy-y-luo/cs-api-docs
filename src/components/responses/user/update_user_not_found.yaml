@@ -1,5 +1,5 @@
-# #/components/responses/show_user_not_found
-description: "user not found"
+# #/components/responses/update_user_not_found
+description: the user to update does not exist
 content:
   application/vnd.json+api:
     schema:

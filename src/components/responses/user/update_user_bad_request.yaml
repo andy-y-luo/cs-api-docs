@@ -1,17 +1,13 @@
-# #/components/responses/create_user_bad_request
-description: "bad create user request, `source` will point to the attribute generating error"
-content: 
+# #/components/responses/update_user_bad_request
+description: "bad update user request, `source` will point to attribute generating error"
+content:
   application/vnd.json+api:
-    schema: 
+    schema:
       $ref: "#/components/schemas/error_response"
     examples:
-      missing_attribute_error:
-        $ref: "#/components/examples/user_missing_attribute_error"
       invalid_attribute_error:
         $ref: "#/components/examples/user_invalid_attribute_error"
       non_unique_attribute_error:
         $ref: "#/components/examples/user_non_unique_attribute_error"
-      password_confirmation_mismatch_error:
-        $ref: "#/components/examples/user_password_confirmation_mismatch_error"
       implausible_birthday_error:
         $ref: "#/components/examples/user_implausible_birthday_error"

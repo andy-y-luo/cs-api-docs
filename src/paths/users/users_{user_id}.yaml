@@ -11,8 +11,6 @@ get:
       $ref: "#/components/responses/show_user"
     401:
       $ref: "#/components/responses/requester_unauthorized"
-    403:
-      $ref: "#/components/responses/show_user_forbidden"
     404:
       $ref: "#/components/responses/show_user_not_found"
 
@@ -29,3 +27,9 @@ put:
   responses:
     200:
       $ref: "#/components/responses/update_user"
+    400:
+      $ref: "#/components/responses/update_user_bad_request"
+    403:
+      $ref: "#/components/responses/update_user_forbidden"
+    404:
+      $ref: "#/components/responses/update_user_not_found"

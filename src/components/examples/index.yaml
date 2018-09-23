@@ -13,8 +13,8 @@ shout_content_root_beacon_creation_error:
   $ref: './errors/shout_content_errors/shout_content_root_beacon_creation_error.yaml'
 shoutset_missing_param_error:
   $ref: './errors/shoutset_errors/shoutset_missing_param_error.yaml'
-user_empty_first_name_error:
-  $ref: './errors/user_errors/user_empty_first_name_error.yaml'
+user_user_does_not_exist_error:
+  $ref: './errors/user_errors/user_user_does_not_exist_error.yaml'
 authentication_email_not_found_error:
   $ref: './errors/authentication_errors/authentication_email_not_found_error.yaml'
 authentication_empty_password_error:
@@ -61,59 +61,19 @@ shout_content_shout_content_dne_error:
   $ref: './errors/shout_content_errors/shout_content_shout_content_dne_error.yaml'
 shoutset_invalid_coordinate_error:
   $ref: './errors/shoutset_errors/shoutset_invalid_coordinate_error.yaml'
-user_first_name_too_long_error:
-  $ref: './errors/user_errors/user_first_name_too_long_error.yaml'
-user_empty_last_name_error:
-  $ref: './errors/user_errors/user_empty_last_name_error.yaml'
-user_last_name_too_long_error:
-  $ref: './errors/user_errors/user_last_name_too_long_error.yaml'
-user_empty_email_error:
-  $ref: './errors/user_errors/user_empty_email_error.yaml'
-user_invalid_email_error:
-  $ref: './errors/user_errors/user_invalid_email_error.yaml'
-user_non_unique_email_error:
-  $ref: './errors/user_errors/user_non_unique_email_error.yaml'
-user_email_too_long_error:
-  $ref: './errors/user_errors/user_email_too_long_error.yaml'
-user_empty_username_error:
-  $ref: './errors/user_errors/user_empty_username_error.yaml'
-user_username_too_long_error:
-  $ref: './errors/user_errors/user_username_too_long_error.yaml'
-user_username_too_short_error:
-  $ref: './errors/user_errors/user_username_too_short_error.yaml'
-user_non_unique_username_error:
-  $ref: './errors/user_errors/user_non_unique_username_error.yaml'
-user_empty_birthday_error:
-  $ref: './errors/user_errors/user_empty_birthday_error.yaml'
-user_invalid_birthday_format_error:
-  $ref: './errors/user_errors/user_invalid_birthday_format_error.yaml'
-user_implausible_birthday_error:
-  $ref: './errors/user_errors/user_implausible_birthday_error.yaml'
-user_empty_password_error:
-  $ref: './errors/user_errors/user_empty_password_error.yaml'
-user_empty_password_confirmation_error:
-  $ref: './errors/user_errors/user_empty_password_confirmation_error.yaml'
-user_invalid_password_error:
-  $ref: './errors/user_errors/user_invalid_password_error.yaml'
-user_password_confirmation_mismatch_error:
-  $ref: './errors/user_errors/user_password_confirmation_mismatch_error.yaml'
-user_password_too_short_error:
-  $ref: './errors/user_errors/user_password_too_short_error.yaml'
-user_password_confirmation_too_short_error:
-  $ref: './errors/user_errors/user_password_confirmation_too_short_error.yaml'
-user_password_too_long_error:
-  $ref: './errors/user_errors/user_password_too_long_error.yaml'
-user_password_confirmation_too_long_error:
-  $ref: './errors/user_errors/user_password_confirmation_too_long_error.yaml'
-user_invalid_coordinate_error:
-  $ref: './errors/user_errors/user_invalid_coordinate_error.yaml'
-user_invalid_prominence_value_error:
-  $ref: './errors/user_errors/user_invalid_prominence_value_error.yaml'
-user_user_does_not_exist_error:
-  $ref: './errors/user_errors/user_user_does_not_exist_error.yaml'
+user_missing_attribute_error:
+  $ref: './errors/user_errors/user_missing_attribute_error.yaml'
+user_invalid_attribute_error:
+  $ref: './errors/user_errors/user_invalid_attribute_error.yaml'
+user_non_unique_attribute_error:
+  $ref: './errors/user_errors/user_non_unique_attribute_error.yaml'
 user_missing_param_error:
   $ref: './errors/user_errors/user_missing_param_error.yaml'
 user_invalid_param_error:
   $ref: './errors/user_errors/user_invalid_param_error.yaml'
+user_implausible_birthday_error:
+  $ref: './errors/user_errors/user_implausible_birthday_error.yaml'
+user_password_confirmation_mismatch_error:
+  $ref: './errors/user_errors/user_password_confirmation_mismatch_error.yaml'
 user_user_not_confirmed_error:
   $ref: './errors/user_errors/user_user_not_confirmed_error.yaml'

@@ -5,6 +5,6 @@ value:
     - status: 400
       code: 5
       title: Invalid parameter error
-      detail: Request includes parameter with invalid value.
+      detail: A parameter value is invalid.
       source:
         parameter: null

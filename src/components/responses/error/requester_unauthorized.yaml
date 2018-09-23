@@ -1,12 +1,9 @@
 # #/components/responses/requester_unauthorized
-description: |+ 
-  requester not authenticated/authorized
-
-  Code | Title | Detail
-  - | - | -
-  280 | Expired token error | The provided authentication token has expired.
-
+description: "requester not authorized"
 content:
   application/vnd.json+api:
     schema:
       $ref: "#/components/schemas/error_response"
+    examples:
+      expired_token_error:
+        $ref: "#/components/examples/authentication_expired_token_error"

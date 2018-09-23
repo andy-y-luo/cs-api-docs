@@ -1,0 +1,10 @@
+# #/components/examples/user_missing_attribute_error
+summary: missing attribute error
+value:
+  errors:
+    - status: 400
+      code: 5
+      title: Missing attribute error
+      detail: A required resource attribute is missing.
+      source:
+        pointer: null

@@ -17,5 +17,3 @@ get:
       $ref: "#/components/responses/show_top_users_bad_request"
     401:
       $ref: "#/components/responses/requester_unauthorized"
-    403:
-      $ref: "#/components/responses/show_top_users_forbidden"

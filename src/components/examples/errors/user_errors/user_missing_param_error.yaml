@@ -5,6 +5,6 @@ value:
     - status: 400
       code: 5
       title: Missing parameter error
-      detail: Request is missing required parameter.
+      detail: A required parameter is missing.
       source:
         parameter: null

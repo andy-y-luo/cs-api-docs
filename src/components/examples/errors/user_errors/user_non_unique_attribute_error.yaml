@@ -1,0 +1,10 @@
+# #/components/examples/user_non_unique_attribute_error
+summary: non unique attribute error
+value:
+  errors:
+    - status: 400
+      code: 5
+      title: Non-unique attribute error
+      detail: A uniqueness-enforced resource attribute is non-unique.
+      source:
+        pointer: null

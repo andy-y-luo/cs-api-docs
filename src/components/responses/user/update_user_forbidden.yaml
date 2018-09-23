@@ -1,0 +1,9 @@
+# #/components/responses/update_user_forbidden
+description: forbidden from updating user
+content:
+  application/vnd.json+api:
+    schema:
+      $ref: "#/components/schemas/error_response"
+    examples:
+      unauthorized_user_update_error:
+        $ref: "#/components/examples/authorization_unauthorized_user_update_error"
