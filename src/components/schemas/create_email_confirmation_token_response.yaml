@@ -1,0 +1,18 @@
+# #/components/schemas/create_email_confirmation_token_response
+description: "schema for create email confirmation token response, containing the newly created email confirmation token"
+type: "object"
+required:
+  - "data"
+properties:
+  data:
+    type: "object"
+    required:
+      - "type"
+      - "id"
+    properties:
+      type:
+        type: "string"
+        example: "email-confirmation-tokens"
+      id:
+        type: "string"
+        format: "uuid"

@@ -1,0 +1,6 @@
+# #/components/responses/create_email_confirmation_token_unauthorized
+description: "requester not authorized (bad credentials)"
+content:
+  application/vnd.json+api:
+    schema:
+      $ref: "#/components/schemas/error_response"

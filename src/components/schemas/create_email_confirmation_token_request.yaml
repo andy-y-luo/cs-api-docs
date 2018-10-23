@@ -1,0 +1,29 @@
+# #/components/schemas/create_email_confirmation_token_request
+description: "object containing credentials for create email confirmation token request"
+type: "object"
+required:
+  - "data"
+properties:
+  data:
+    type: "object"
+    required:
+      - "type"
+      - "attributes"
+    properties:
+      type:
+        type: "string"
+        example: "email-confirmation-tokens"
+      attributes:
+        type: "object"
+        required:
+          - "email"
+          - "password"
+        properties:
+          email:
+            type: "string"
+            format: "email"
+            description: "The email of the unconfirmed user"
+          password:
+            type: "string"
+            format: "password"
+            description: "The password of the unconfirmed user"

@@ -2,6 +2,10 @@
 error_response:
   $ref: "./error_response.yaml"
 
+# Resource
+delete_resource_response:
+  $ref: "./delete_resource_response.yaml"
+
 # User
 user:
   $ref: "./user.yaml"
@@ -21,3 +25,9 @@ update_user_request:
   $ref: "./update_user_request.yaml"
 update_user_response:
   $ref: "./update_user_response.yaml"
+
+# User Email Confirmation
+create_email_confirmation_token_request:
+  $ref: "./create_email_confirmation_token_request.yaml"
+create_email_confirmation_token_response:
+  $ref: "./create_email_confirmation_token_response.yaml"

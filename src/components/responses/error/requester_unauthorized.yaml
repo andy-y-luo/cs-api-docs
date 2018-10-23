@@ -5,5 +5,9 @@ content:
     schema:
       $ref: "#/components/schemas/error_response"
     examples:
+      missing_token_error:
+        $ref: "#/components/examples/authentication_missing_token_header_error"
       expired_token_error:
         $ref: "#/components/examples/authentication_expired_token_error"
+      user_not_confirmed_error:
+        $ref: "#/components/examples/user_user_not_confirmed_error"

@@ -2,3 +2,6 @@ create_user:
   $ref: "./create_user.yaml"
 update_user:
   $ref: "./update_user.yaml"
+
+create_email_confirmation_token:
+  $ref: "./create_email_confirmation_token.yaml"

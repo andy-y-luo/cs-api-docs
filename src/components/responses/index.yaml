@@ -1,3 +1,4 @@
+# Error
 error:
   $ref: "./error/error.yaml"
 error_1:
@@ -9,6 +10,7 @@ not_found:
 requester_unauthorized:
   $ref: "./error/requester_unauthorized.yaml"
 
+# User
 create_user:
   $ref: "./user/create_user.yaml"
 create_user_bad_request:
@@ -29,3 +31,11 @@ update_user_forbidden:
   $ref: "./user/update_user_forbidden.yaml"
 update_user_not_found:
   $ref: "./user/update_user_not_found.yaml"
+delete_user:
+  $ref: "./user/delete_user.yaml"
+
+# User Email Confirmation
+create_email_confirmation_token:
+  $ref: "./user_email_confirmation/create_email_confirmation_token.yaml"
+create_email_confirmation_token_unauthorized:
+  $ref: "./user_email_confirmation/create_email_confirmation_token_unauthorized.yaml"

@@ -1,0 +1,6 @@
+# #/components/requestBodies/create_email_confirmation_token
+description: "the credentials of a user with unconfirmed email"
+content:
+  "application/vnd.api+json":
+    schema:
+      $ref: "#/components/schemas/create_email_confirmation_token_request"

@@ -1,0 +1,12 @@
+post:
+  tags:
+    - "User Email Confirmation"
+  summary: "Create Email Confirmation Token"
+  description: "Creates a new email confirmation token, given the credentials that correctly identify a user with an unconfirmed email. Sends the confirmation code to the user's associated email address. The token expires after 60 minutes. Calling this endpoint again before an existing confirmation token is confirmed invalidates the previous token and generates a new one, resending the email."
+  requestBody:
+    $ref: "#/components/requestBodies/create_email_confirmation_token"
+  responses:
+    201:
+      $ref: "#/components/responses/create_email_confirmation_token"
+    # 401:
+    #   $ref: "#/components/responses/create_email_confirmation_token_unauthorized"

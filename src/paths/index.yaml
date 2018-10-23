@@ -1,1 +1,11 @@
-$ref: ./users/index.yaml
+/users:
+  $ref: users/users.yaml
+/users/{user_id}:
+  $ref: users/users_{user_id}.yaml
+/users/top:
+  $ref: users/users_top.yaml
+
+/email_confirmation_tokens:
+  $ref: email_confirmation_tokens/email_confirmation_tokens.yaml
+# /email_confirmation_tokens/{email_confirmation_token_id}:
+#   $ref: email_confirmation_tokens/email_confirmation_tokens_{email_confirmation_token_id}.yaml

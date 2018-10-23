@@ -1,6 +1,0 @@
-/users:
-  $ref: ./users.yaml
-/users/{user_id}:
-  $ref: ./users_{user_id}.yaml
-/users/top:
-  $ref: ./users_top.yaml

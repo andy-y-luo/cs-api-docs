@@ -1,0 +1,6 @@
+# #/components/responses/create_email_confirmation_token
+description: "response containing newly created email confirmation token"
+content:
+  application/vnd.json+api:
+    schema:
+      $ref: "#/components/schemas/create_email_confirmation_token_response"

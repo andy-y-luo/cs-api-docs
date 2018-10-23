@@ -1,0 +1,29 @@
+# #/components/schemas/delete_resource_response
+description: "resource deletion object  information about deleted resource"
+type: "object"
+required:
+  - "meta"
+properties:
+  meta:
+    type: "object"
+    required:
+      - "deletion"
+      - "id"
+      - "type"
+      - "deletion-time"
+    properties:
+      deletion:
+        type: "string"
+        example: "resource"
+        description: "Describes the deletion"
+      id:
+        type: "string"
+        format: "uuid"
+        description: "The ID of the resource deleted"
+      type:
+        type: "string"
+        description: "The type of the resource deleted"
+      deletion-time:
+        type: "string"
+        format: "date-time"
+        description: "The time at which the deletion completed"

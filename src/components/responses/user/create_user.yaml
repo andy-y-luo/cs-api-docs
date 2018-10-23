@@ -1,6 +1,6 @@
 # #/components/responses/create_user
-description: response containing the newly created user
+description: "response containing the newly created user"
 content: 
   application/vnd.json+api:
     schema: 
-      $ref: '#/components/schemas/create_user_response'
+      $ref: "#/components/schemas/create_user_response"

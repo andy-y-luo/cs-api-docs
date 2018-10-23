@@ -1,0 +1,6 @@
+# #/components/responses/delete_user
+description: the user has been successfully deleted
+content:
+  application/vnd.json+api:
+    schema:
+      $ref: "#/components/schemas/delete_resource_response"

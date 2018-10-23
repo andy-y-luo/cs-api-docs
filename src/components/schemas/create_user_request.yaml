@@ -1,4 +1,5 @@
 # #/components/schemas/create_user_request
+description: "object containing the attributes for a create user request"
 type: "object"
 required:
   - "data"

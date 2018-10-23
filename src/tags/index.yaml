@@ -1,3 +1,17 @@
+- name: Authentication
+  description: In order for a client to access the majority of backend endpoints, the client must prove that it is acting on behalf of a user who can prove its identity through user credentials. Once identity has been verified, the backend will release a limited-time authentication token for the client to use in subsequent requests. This token not only authenticates the user in a request, but also identifies the user for authorization purposes. Once the token expires, the client must obtain a new one by proving its identity through credentials again.
+
 - name: User
   description: Users are the core of the platform, and can post shouts, create echoes of shouts, and perform other interactions with social content. Each User instance corresponds to a user account, and can be accessed from any client. Users are tied to their unique email addresses. Users can't view content that they are not authorized to view such as other user's personal information or detailed analytics about shouts/echoes that they have not made or are involved in.
+
+- name: User Email Confirmation
+  description: "Once a user is created, the associated email must be confirmed before the user is authorized to utilize the majority of API endpoints, including the one to obtain an authentication token (login).
+  The confirmation flow is as follows:
+
+  1. A confirmation token containing a code and expiration time is generated when a unconfirmed user's credentials are supplied to one endpoint. If the credentials identify an unconfirmed user, an email is sent to the user's registered email address containing this time-sensitive confirmation code.
+   
+  2. If the confirmation code is supplied to the backend by the correctly associated user within the timeframe of the confirmation token, along with the credentials of the user, the email address of that user becomes confirmed."
+
 - name: Shout Content
+  description: The social content of a Shout is contained in a ShoutContent resource. Each Shout has strictly one ShoutContent, which in turn belongs to strictly one User. The title and text of a ShoutContent are displayed to the user whenever they browse Shouts. Any links, pointing to media or otherwise, will be embedded inline and as-is. Each ShoutContent has one or more ShoutBeacons, which ground the Shout to geographic and temporal locations. All ‘Shout Contents’ will pass through a content filter that will block inappropriate text or links, in addition to content that may severely jeopardize the privacy of the user.
+

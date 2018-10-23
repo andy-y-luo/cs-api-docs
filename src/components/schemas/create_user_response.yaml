@@ -1,5 +1,5 @@
 # #/components/schemas/create_user_response
-description: "schema for create new user response, containing newly created user"
+description: "schema for create user response, containing newly created user"
 type: "object"
 required:
   - "data"

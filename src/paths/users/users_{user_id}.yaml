@@ -18,7 +18,7 @@ put:
   tags:
     - "User"
   summary: "Update user"
-  description: "This request is for updating a user by ID. This action can only be performed for one's own user (i.e. the authentication token must correspond to the user to be updated)."
+  description: "This request is for updating a user by ID. This action can only be performed for one's own user (i.e. the authentication token must correspond to the user being updated)."
   parameters:
     - $ref: "#/components/parameters/authentication_token"
     - $ref: "#/components/parameters/path_user_id"
@@ -29,7 +29,23 @@ put:
       $ref: "#/components/responses/update_user"
     400:
       $ref: "#/components/responses/update_user_bad_request"
+    401:
+      $ref: "#/components/responses/requester_unauthorized"
     403:
       $ref: "#/components/responses/update_user_forbidden"
     404:
       $ref: "#/components/responses/update_user_not_found"
+
+delete:
+  tags:
+    - "User"
+  summary: "Destroy user"
+  description: "This request terminates the user account. Use caution when utilizing this request, as there is no way to reverse the deletion of a User. This action can only be performed for one's own user (i.e. the authentication token must correspond to the user being deleted)."
+  parameters:
+    - $ref: "#/components/parameters/authentication_token"
+    - $ref: "#/components/parameters/path_user_id"
+  responses:
+    200:
+      $ref: "#/components/responses/delete_user"
+    401:
+      $ref: "#/components/responses/requester_unauthorized"
