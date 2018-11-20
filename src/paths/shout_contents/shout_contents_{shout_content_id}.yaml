@@ -1,0 +1,13 @@
+get:
+  tags:
+    - "Shout Content"
+  summary: "Show shout content"
+  description: "This request is for retrieving a single shout content by ID. This shout content does not have to be authored by the user making the request."
+  parameters:
+    - $ref: "#/components/parameters/authentication_token"
+    - $ref: "#/components/parameters/path_shout_content_id"
+    - $ref: "#/components/parameters/latitude"
+    - $ref: "#/components/parameters/longitude"
+  responses:
+    200:
+      $ref: "#/components/responses/show_shout_content"

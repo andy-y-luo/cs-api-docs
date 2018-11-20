@@ -1,0 +1,7 @@
+# #/components/parameters/path_shout_content_id
+name: "shout_content_id"
+in: "path"
+description: "the id of the shout content"
+required: true
+type: "string"
+format: "uuid"

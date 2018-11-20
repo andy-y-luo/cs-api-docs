@@ -1,0 +1,6 @@
+# #/components/responses/show_shout_content
+description: "response containing the shout content"
+content:
+  application/vnd.api+json:
+    schema:
+      $ref: "#/components/schemas/show_shout_content_response"

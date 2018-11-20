@@ -39,3 +39,7 @@ create_email_confirmation_token:
   $ref: "./user_email_confirmation/create_email_confirmation_token.yaml"
 create_email_confirmation_token_unauthorized:
   $ref: "./user_email_confirmation/create_email_confirmation_token_unauthorized.yaml"
+
+# Shout Content
+show_shout_content:
+  $ref: "./shout_content/show_shout_content.yaml"

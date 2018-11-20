@@ -9,6 +9,7 @@ properties:
   id:
     type: "string"
     format: "uuid"
+    description: "the ID of the user"
   type:
     type: "string"
     example: "users"

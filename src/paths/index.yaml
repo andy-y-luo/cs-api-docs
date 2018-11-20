@@ -9,3 +9,6 @@
   $ref: email_confirmation_tokens/email_confirmation_tokens.yaml
 # /email_confirmation_tokens/{email_confirmation_token_id}:
 #   $ref: email_confirmation_tokens/email_confirmation_tokens_{email_confirmation_token_id}.yaml
+
+/shout_contents/{shout_content_id}:
+  $ref: shout_contents/shout_contents_{shout_content_id}.yaml

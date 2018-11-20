@@ -31,3 +31,7 @@ create_email_confirmation_token_request:
   $ref: "./create_email_confirmation_token_request.yaml"
 create_email_confirmation_token_response:
   $ref: "./create_email_confirmation_token_response.yaml"
+
+# Shout Content
+show_shout_content_response:
+  $ref: "./show_shout_content_response.yaml"

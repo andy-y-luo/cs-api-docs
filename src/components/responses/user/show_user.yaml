@@ -4,5 +4,5 @@ content:
   application/vnd.api+json:
     schema:
       oneOf:
-        - $ref: '#/components/schemas/show_user_response'
+        - $ref: "#/components/schemas/show_user_response"
         - $ref: "#/components/schemas/show_self_user_response"

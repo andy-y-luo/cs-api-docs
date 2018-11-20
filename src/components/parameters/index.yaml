@@ -12,3 +12,6 @@ latitude:
   $ref: "./latitude.yaml"
 longitude:
   $ref: "./longitude.yaml"
+
+path_shout_content_id:
+  $ref: "./path_shout_content_id.yaml"
