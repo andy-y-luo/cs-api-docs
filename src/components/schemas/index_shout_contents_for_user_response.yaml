@@ -8,8 +8,8 @@ properties:
   meta:
     type: "object"
     required:
-      - "user-echoed?"
-      - "in-range?"
+      - "user-echoed-list"
+      - "in-range-list"
       - "candidate-shout-beacon-ids"
     properties:
       user-echoed-list:
