@@ -1,5 +1,5 @@
 # #/components/responses/index_shout_contents_for_location
-description: "response containing an array of shout contents that are physicall and temporally in-range of the requester"
+description: "response containing an array of shout contents that are physically and temporally in-range of the requester"
 content:
   application/vnd.api+json:
     schema:

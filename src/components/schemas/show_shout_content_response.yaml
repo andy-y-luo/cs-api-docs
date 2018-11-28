@@ -24,4 +24,9 @@ properties:
         description: "if `inrange?` is true, this corresponds to the ID of the nearest active shout beacon id, otherwise is empty string"
   data:
     $ref: "#/components/schemas/shout_content"
+  included:
+    description: "an array containing the resource object of the user who authored the shout content"
+    type: "array"
+    items:
+      $ref: "#/components/schemas/user"
       
