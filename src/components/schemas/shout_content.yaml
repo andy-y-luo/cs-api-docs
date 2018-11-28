@@ -1,0 +1,65 @@
+# #/components/schemas/shout_content
+description: "shout content object"
+type: "object"
+required:
+- "id"
+- "type"
+- "attributes"
+- "relationships"
+properties:
+  id:
+    $ref: "#/components/schemas/shout_content_id"
+  type:
+    type: "string"
+    example: "shout-contents"
+  attributes:
+    type: "object"
+    required:
+      - "title"
+      - "text"
+      - "echo-count"
+      - "shout-views-count"
+      - "expires-at"
+      - "created-at"
+    properties:
+      title:
+        type: "string"
+        description: "the title of the shout content"
+      text:
+        type: "string"
+        description: "the text content of the shout content"
+      echo-count:
+        type: "integer"
+        format: "int64"
+        description: "the number of times the shout content has been echoed"
+      shout-views-count:
+        type: "integer"
+        format: "int64"
+        description: "the number of views the shout content has received"
+      expires-at:
+        type: "string"
+        format: "date-time"
+        description: "the time at which the shout content expires, in ISO8601 format with millisecond resolution"
+      created-at:
+        type: "string"
+        format: "date-time"
+        description: "the time at which the shout content was created, in ISO8601 format with millisecond resolution"
+  relationships:
+    type: "object"
+    required:
+      - "user"
+    properties:
+      user:
+        description: "the user that authored the shout content (belongs-to relationship)"
+        type: "object"
+        required:
+          - "id"
+          - "type"
+        properties:
+          id:
+            type: "string"
+            format: "uuid"
+            description: "the ID of the user"
+          type:
+            type: "string"
+            example: "users"

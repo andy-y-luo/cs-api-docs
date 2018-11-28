@@ -1,0 +1,15 @@
+# #/components/schemas/candidate_shout_beacon_mapping
+description: "schema for a mapping between a shout content and a active in-range shout beacon, suitable as a parent beacon in related future requests"
+type: "object"
+required:
+ - "shout-content-id"
+ - "candidate-shout-beacon-id"
+properties:
+  shout-content-id:
+    description: "the ID of the shout content"
+    type: "string"
+    format: "uuid"
+  candidate-shout-beacon-id:
+    description: "the ID of the candidate shout beacon (an active in-range shout beacon suitable for related future requests)"
+    type: "string"
+    format: "uuid"

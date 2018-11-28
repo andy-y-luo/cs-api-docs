@@ -1,0 +1,4 @@
+# #/components/schemas/shout_content_id
+description: "the id of the shout content"
+type: "string"
+format: "uuid"

@@ -1,0 +1,6 @@
+# #/components/responses/index_shout_contents_for_user
+description: "response containing an array of shout contents authored a single user"
+content:
+  application/vnd.api+json:
+    schema:
+      $ref: "#/components/schemas/index_shout_contents_for_user_response"

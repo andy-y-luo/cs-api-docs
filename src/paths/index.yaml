@@ -12,3 +12,8 @@
 
 /shout_contents/{shout_content_id}:
   $ref: shout_contents/shout_contents_{shout_content_id}.yaml
+/users/{user_id}/shout_contents:
+  $ref: shout_contents/users_{user_id}_shout_contents.yaml
+/shout_contents:
+  $ref: shout_contents/shout_contents.yaml
+

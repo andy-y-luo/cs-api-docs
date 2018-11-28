@@ -1,0 +1,14 @@
+get:
+  tags:
+   - "Shout"
+  summary: "Index shout content for location"
+  description: "This endpoint queries for and returns a set of active shout contents based on the requesters location. Will return a maximum of 20 shout contents. If more than 20 active shouts physically overlap with the requester's location, a semi-random subset is returned."
+
+  parameters:
+    - $ref: "#/components/parameters/authentication_token"
+    - $ref: "#/components/parameters/latitude"
+    - $ref: "#/components/parameters/longitude"
+
+  responses:
+    200:
+      $ref: "#/components/responses/index_shout_contents_for_location"

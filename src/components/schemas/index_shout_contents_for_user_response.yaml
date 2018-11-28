@@ -1,0 +1,33 @@
+# #/components/schemas/index_shout_contents_for_user_response
+description: "schema for index shout contents for user response"
+type: "object"
+required:
+  - "meta"
+  - "data"
+properties:
+  meta:
+    type: "object"
+    required:
+      - "user-echoed?"
+      - "in-range?"
+      - "candidate-shout-beacon-ids"
+    properties:
+      user-echoed-list:
+        type: "array"
+        description: "a list IDs of the shout contents that have been echoed by the requesting user"
+        items:
+          $ref: "#/components/schemas/shout_content_id"
+      in-range-list:
+        type: "array"
+        description: "a list of IDs of shout contents that are in range of the requesting user"
+        items:
+          $ref: "#/components/schemas/shout_content_id"
+      candidate-shout-beacon-ids:
+        type: "array"
+        description: "contains a mapping from every in-range shout content to its candidate shout beacon for this request"
+        items:
+          $ref: "#/components/schemas/candidate_shout_beacon_mapping"
+  data:
+    type: "array"
+    items:
+      $ref: "#/components/schemas/shout_content"

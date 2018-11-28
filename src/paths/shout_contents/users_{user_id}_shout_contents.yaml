@@ -1,0 +1,13 @@
+get:
+  tags:
+    - "Shout Content"
+  summary: "Index shout contents for user"
+  description: "Returns the collection of ShoutContents for a given user. If user being indexed on matches the user making the request (i.e. request is for one's own user), both active and inactive shout contents are returned. Otherwise, only active shout contents are returned."
+  parameters:
+    - $ref: "#/components/parameters/authentication_token"
+    - $ref: "#/components/parameters/path_user_id"
+    - $ref: "#/components/parameters/latitude"
+    - $ref: "#/components/parameters/longitude"
+  responses:
+    200:
+      $ref: "#/components/responses/index_shout_contents_for_user"

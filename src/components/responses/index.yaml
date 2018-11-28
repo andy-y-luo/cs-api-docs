@@ -43,3 +43,7 @@ create_email_confirmation_token_unauthorized:
 # Shout Content
 show_shout_content:
   $ref: "./shout_content/show_shout_content.yaml"
+index_shout_contents_for_user:
+  $ref: "./shout_content/index_shout_contents_for_user.yaml"
+index_shout_contents_for_location:
+  $ref: "./shout_content/index_shout_contents_for_location.yaml"

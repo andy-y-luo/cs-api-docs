@@ -33,5 +33,15 @@ create_email_confirmation_token_response:
   $ref: "./create_email_confirmation_token_response.yaml"
 
 # Shout Content
+shout_content:
+  $ref: "./shout_content.yaml"
+shout_content_id:
+  $ref: "./shout_content_id.yaml"
+candidate_shout_beacon_mapping:
+  $ref: "./candidate_shout_beacon_mapping.yaml"
 show_shout_content_response:
   $ref: "./show_shout_content_response.yaml"
+index_shout_contents_for_user_response:
+  $ref: "./index_shout_contents_for_user_response.yaml"
+index_shout_contents_for_location_response:
+  $ref: "./index_shout_contents_for_location_response.yaml"

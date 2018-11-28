@@ -32,6 +32,6 @@ $ nf start
 ### Deploying to AWS
 Using the aws cli, the documentation static site is deployed to AWS:
 ```bash
-$ ./scripts/s3_deploy <aws-profile-name>
+$ ./scripts/s3_deploy.sh <aws-profile-name>
 ```
 where `<aws-profile-name>` is the name of your aws cli profile for your CrowdShout AWS account. For more information on setting up aws-cli see [here](https://docs.aws.amazon.com/lambda/latest/dg/setup-awscli.html).
