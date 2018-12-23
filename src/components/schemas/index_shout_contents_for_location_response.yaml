@@ -9,15 +9,21 @@ properties:
   meta:
     type: "object"
     required:
-      - "user-echoed?"
-      - "candidate-shout-beacon-ids"
+      - "user-echoed"
+      - "echoable"
+      - "candidate-shout-beacons"
     properties:
-      user-echoed-list:
+      user-echoed:
         type: "array"
         description: "a list IDs of the shout contents that have been echoed by the requesting user"
         items:
           $ref: "#/components/schemas/shout_content_id"
-      candidate-shout-beacon-ids:
+      echoable:
+        type: "array"
+        description: "a list of IDs of shout contents that are in range of the requesting user"
+        items:
+          $ref: "#/components/schemas/shout_content_id"
+      candidate-shout-beacons:
         type: "array"
         description: "contains a mapping from every in-range shout content to its candidate shout beacon for this request"
         items:

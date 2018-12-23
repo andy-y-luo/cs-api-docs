@@ -24,6 +24,11 @@ $ node gen_errors.js
 ```
 
 ### Local Development Server
+First create the initial bundle and build directory:
+```bash
+$ ./scripts/bundle_standalone.sh
+```
+
 Using foreman, a local server is spun up that watches the source directory and updates whenever a file changes:
 ```bash
 $ nf start

@@ -9,6 +9,11 @@ Assumes:
   $ npm install -g foreman
   ```
 
+- Install nodemon:
+    ```bash
+    $ npm install -g nodemon
+    ```
+
 - Install ReDoc:
   ```bash
   $ npm install -g redoc-cli

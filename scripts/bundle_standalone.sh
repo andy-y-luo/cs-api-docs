@@ -4,6 +4,9 @@ SCRIPTPATH="$( cd "$(dirname "$0")" ; pwd -P )"
 # Gather the options
 OPTIONS=$(<$SCRIPTPATH/redoc_options.sh)
 
+# Make the build directory
+mkdir -p $SCRIPTPATH/../public/
+
 # Resolve the json refs
 json-refs resolve \
     --filter relative \

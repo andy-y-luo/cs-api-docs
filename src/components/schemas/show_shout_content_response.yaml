@@ -10,15 +10,15 @@ properties:
     type: "object"
     required:
       - "user-echoed?"
-      - "in-range?"
+      - "echoable?"
       - "candidate-shout-beacon-id"
     properties:
       user-echoed?:
         type: "boolean"
         description: "whether the requesting user has echoed the shout content or not"
-      in-range?:
+      echoable?:
         type: "boolean"
-        description: "whether the request is being made from within the shout content spatial coverage or not"
+        description: "whether the requester can echo the shout content at this time from the request location or not"
       candidate-shout-beacon-id:
         type: "string"
         format: "uuid"

@@ -2,6 +2,7 @@
 var yaml = require('js-yaml');
 var fs = require("fs");
 var JsonRefs = require("json-refs");
+var path = require('path')
 
 // File and dir constants
 const INDEX_FILE = '/src/index.yaml'
