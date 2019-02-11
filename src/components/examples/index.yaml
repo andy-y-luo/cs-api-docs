@@ -49,8 +49,12 @@ shout_beacon_self_join_cond_unmet_error:
   $ref: './errors/shout_beacon_errors/shout_beacon_self_join_cond_unmet_error.yaml'
 shout_beacon_invalid_sql_query_error:
   $ref: './errors/shout_beacon_errors/shout_beacon_invalid_sql_query_error.yaml'
+shout_content_invalid_param_error:
+  $ref: './errors/shout_content_errors/shout_content_invalid_param_error.yaml'
 shout_content_missing_attr_error:
   $ref: './errors/shout_content_errors/shout_content_missing_attr_error.yaml'
+shout_content_missing_param_error:
+  $ref: './errors/shout_content_errors/shout_content_missing_param_error.yaml'
 shout_content_invalid_attr_error:
   $ref: './errors/shout_content_errors/shout_content_invalid_attr_error.yaml'
 shout_content_no_in_range_shout_beacons_error:

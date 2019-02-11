@@ -53,13 +53,19 @@ properties:
         description: "the user that authored the shout content (belongs-to relationship)"
         type: "object"
         required:
-          - "id"
-          - "type"
+          - "data"
         properties:
-          id:
-            type: "string"
-            format: "uuid"
-            description: "the ID of the user"
-          type:
-            type: "string"
-            example: "users"
+          data:
+            description: "the user data object"
+            type: "object"
+            required:
+              - "id"
+              - "type"
+            properties:
+              id:
+                type: "string"
+                format: "uuid"
+                description: "the ID of the user"
+              type:
+                type: "string"
+                example: "users"

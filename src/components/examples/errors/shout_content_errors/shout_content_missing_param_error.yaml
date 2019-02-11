@@ -1,0 +1,10 @@
+# #/components/examples/shout_content_missing_param_error
+summary: missing param error
+value:
+  errors:
+    - status: 400
+      code: x
+      title: Missing parameter error
+      detail: A required parameter is missing.
+      source:
+        parameter: null

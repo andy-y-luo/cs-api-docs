@@ -2,7 +2,7 @@ get:
   tags:
    - "Shout"
   summary: "Index shout content for location"
-  description: "This endpoint queries for and returns a set of active shout contents based on the requesters location. Will return a maximum of 20 shout contents. If more than 20 active shouts physically overlap with the requester's location, a semi-random subset is returned."
+  description: "This endpoint queries for and returns a set of active shout contents based on the requesters location. Will return a maximum of 20 shout contents. If more than 20 active shouts physically overlap with the requester's location, a semi-random subset is returned. If no shout contents are  to be returned, a singlur empty array will be returned keyed by `data`."
 
   parameters:
     - $ref: "#/components/parameters/authentication_token"
